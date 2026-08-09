@@ -20,3 +20,6 @@ __pycache__/
 app/static/img/video/*.mp4
 app/static/img/video/*.mov
 app/static/img/video/*.MOV
+
+# Allow optimized hero video
+!app/static/img/video/mainmovie_web.mp4
