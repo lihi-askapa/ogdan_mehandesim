@@ -21,5 +21,8 @@ app/static/img/video/*.mp4
 app/static/img/video/*.mov
 app/static/img/video/*.MOV
 
-# Allow optimized hero video
+# Allow optimized web videos
 !app/static/img/video/mainmovie_web.mp4
+!app/static/img/video/project1_web.mp4
+!app/static/img/video/project2_web.mp4
+!app/static/img/video/project3_web.mp4
