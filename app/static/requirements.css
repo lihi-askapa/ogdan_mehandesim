@@ -1,0 +1,328 @@
+/* ===== עיצוב דרושים – גרסה נקייה ומקצועית ===== */
+
+.jobs-hero {
+  background: linear-gradient(
+    135deg,
+    #f5fafc 0%,
+    #eef3ff 40%,
+    #f7f8fb 100%
+  );
+  border-bottom: 1px solid #e2e6ef;
+  text-align: center;
+}
+
+.jobs-section {
+  background-color: #f7f8fb;
+  padding-top: 2rem;
+}
+
+.jobs-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.jobs-subtitle {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ===== כרטיסי משרות ===== */
+
+.job-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.6rem 1.4rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #edf0f7;
+}
+
+.job-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f0f2f6;
+  padding-bottom: 0.7rem;
+}
+
+.job-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #0f2f3f;
+}
+
+.job-location {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+}
+
+.job-body {
+  flex-grow: 1;
+}
+
+.job-subtitle,
+.job-subsubtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  color: #0f2f3f;
+}
+
+.job-text {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #444;
+}
+
+.job-list {
+  padding-right: 1.2rem;
+  margin: 0;
+}
+
+.job-list li {
+  margin-bottom: 0.35rem;
+  font-size: 0.92rem;
+  color: #444;
+}
+
+/* ===== אזור תחתון בכרטיס משרה ===== */
+
+.job-footer {
+  margin-top: 1.4rem;
+  border-top: 1px solid #f0f2f6;
+  padding-top: 0.8rem;
+}
+
+.job-note {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.job-apply-btn {
+  background-color: #0f6ea5;
+  border-color: #0f6ea5;
+  border-radius: 999px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.job-apply-btn:hover,
+.job-apply-btn:focus {
+  background-color: #0b527b;
+  border-color: #0b527b;
+}
+
+/* ===== טופס תחתון ===== */
+
+.jobs-apply-section {
+  scroll-margin-top: 110px;
+}
+
+.jobs-apply-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  border: 1px solid #edf0f7;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.jobs-bottom-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.jobs-bottom-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== שדות הטופס ===== */
+
+.jobs-apply-card .form-group label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.jobs-apply-card .form-control {
+  min-height: 42px;
+  border: 1px solid #d1d7e5;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  color: #222;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.jobs-apply-card textarea.form-control {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.jobs-apply-card .form-control:focus {
+  border-color: #0f6ea5;
+  box-shadow: 0 0 0 0.15rem rgba(15, 110, 165, 0.16);
+}
+
+/* ===== העלאת קורות חיים ===== */
+
+.cv-upload-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  padding: 0.85rem;
+  border: 1px dashed #b8c9d6;
+  border-radius: 0.85rem;
+  background-color: #f8fbfd;
+}
+
+/* מסתיר את שדה הקובץ הרגיל, אך משאיר אותו נגיש */
+.cv-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* כפתור בחירת הקובץ */
+.cv-upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 140px;
+  margin: 0;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid #0f6ea5;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #0f6ea5;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cv-upload-button:hover,
+.cv-upload-button:focus {
+  background-color: #0f6ea5;
+  border-color: #0f6ea5;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(15, 110, 165, 0.18);
+}
+
+.cv-upload-button i {
+  font-size: 1rem;
+}
+
+/* שם הקובץ שנבחר */
+.cv-file-name {
+  flex: 1;
+  min-width: 160px;
+  font-size: 0.9rem;
+  color: #667085;
+  direction: rtl;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* טקסט הסבר מתחת לשדה */
+.jobs-apply-card .form-text {
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+}
+
+/* ===== כפתור שליחת מועמדות ===== */
+
+.jobs-apply-card .btn-primary {
+  min-height: 44px;
+  border-radius: 0.85rem;
+  background-color: #0f6ea5;
+  border-color: #0f6ea5;
+  font-weight: 600;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.jobs-apply-card .btn-primary:hover,
+.jobs-apply-card .btn-primary:focus {
+  background-color: #0b527b;
+  border-color: #0b527b;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(15, 110, 165, 0.2);
+}
+
+/* ===== רספונסיביות ===== */
+
+@media (max-width: 991px) {
+  .job-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .jobs-title {
+    font-size: 1.7rem;
+  }
+
+  .jobs-apply-card {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .cv-upload-wrapper {
+    align-items: stretch;
+  }
+
+  .cv-upload-button {
+    width: 100%;
+  }
+
+  .cv-file-name {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .jobs-hero {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .job-card {
+    padding: 1.35rem 1.1rem;
+  }
+
+  .jobs-bottom-title {
+    font-size: 1.2rem;
+  }
+
+  .jobs-bottom-text {
+    font-size: 0.9rem;
+  }
+}

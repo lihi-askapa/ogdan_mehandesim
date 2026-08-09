@@ -1,0 +1,471 @@
+{% extends "base.html" %}
+
+{% block title %}דרושים – אוגדן מהנדסים{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='requirements.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO לדרושים -->
+<section class="jobs-hero py-5">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+
+        <h1 class="jobs-title mb-3">
+          דרושים באבי אסקפה - אוגדן מהנדסים
+        </h1>
+
+        <p class="jobs-subtitle mb-1">
+          אנחנו מחפשים מהנדסים, הנדסאים ומנהלי עבודה מצוינים להצטרף לצוות המקצועי שלנו
+          בפרויקטי בנייה ושיפוצים ופרויקטי תשתיות, מים, ביוב, ניקוז, כבישים ופיתוח עירוני.
+        </p>
+
+        <p class="text-muted small mb-0">
+          כל המשרות מיועדות לנשים ולגברים כאחד.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- רשימת משרות -->
+<section class="jobs-section pb-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- משרה 1 -->
+      <div class="col-md-4 mb-4">
+        <article class="job-card h-100">
+
+          <header class="job-header">
+            <h3 class="job-title">
+              הנדסאי/ת אזרחי/ת – בניין
+            </h3>
+
+            <p class="job-location">
+              משרה מלאה · אזור מרכז והשפלה
+            </p>
+          </header>
+
+          <div class="job-body">
+
+            <h5 class="job-subtitle">
+              תיאור המשרה
+            </h5>
+
+            <p class="job-text">
+              לחברה העוסקת בניהול ופיקוח פרויקטים בתחום הבנייה והתשתיות,
+              דרוש/ה הנדסאי/ת אזרחי/ת – בניין לתפקיד פיקוח בשטח, ליווי קבלנים
+              וניהול יומיומי של עבודות ביצוע בפרויקטים ציבוריים ותשתיתיים.
+            </p>
+
+            <h6 class="job-subsubtitle">
+              דרישות התפקיד
+            </h6>
+
+            <ul class="job-list">
+              <li>הנדסאי/ת אזרחי/ת / בניין – חובה.</li>
+              <li>ניסיון של שנה ומעלה בפיקוח / ביצוע – יתרון משמעותי.</li>
+              <li>מוטיבציה גבוהה, יכולת למידה ועבודה עצמאית.</li>
+              <li>רישיון נהיגה – חובה.</li>
+            </ul>
+
+          </div>
+
+          <footer class="job-footer">
+
+            <p class="job-note">
+              משרה מתאימה גם לבעלי ניסיון מועט המעוניינים להתמקצע בתחום.
+            </p>
+
+            <a
+              href="#general-application"
+              class="btn btn-primary job-apply-btn"
+            >
+              שליחת מועמדות למשרה
+            </a>
+
+          </footer>
+
+        </article>
+      </div>
+
+      <!-- משרה 2 -->
+      <div class="col-md-4 mb-4">
+        <article class="job-card h-100">
+
+          <header class="job-header">
+
+            <h3 class="job-title">
+              מהנדס/ת אזרחי/ת
+            </h3>
+
+            <p class="job-location">
+              משרה מלאה · פרויקטים שונים ברשויות ותאגידי מים
+            </p>
+
+          </header>
+
+          <div class="job-body">
+
+            <h5 class="job-subtitle">
+              תיאור המשרה
+            </h5>
+
+            <p class="job-text">
+              ניהול ופיקוח על פרויקטים הנדסיים בתחום הבנייה והתשתיות:
+              כבישים, פיתוח עירוני, תשתיות מים וביוב. ליווי הפרויקט
+              משלב התכנון ועד המסירה, עבודה מול גורמי תכנון, קבלנים ורשויות.
+            </p>
+
+            <h6 class="job-subsubtitle">
+              דרישות התפקיד
+            </h6>
+
+            <ul class="job-list">
+              <li>תואר ראשון בהנדסה אזרחית – חובה.</li>
+              <li>ניסיון של 1–3 שנים בניהול / פיקוח פרויקטים – יתרון.</li>
+              <li>היכרות עם פרויקטי תשתיות ברשויות מקומיות – יתרון.</li>
+              <li>יכולת ניהול מספר ממשקים במקביל ויחסי אנוש מעולים.</li>
+            </ul>
+
+          </div>
+
+          <footer class="job-footer">
+
+            <p class="job-note">
+              תנאים טובים למתאימים/ות וסביבת עבודה מקצועית ותומכת.
+            </p>
+
+            <a
+              href="#general-application"
+              class="btn btn-primary job-apply-btn"
+            >
+              שליחת מועמדות למשרה
+            </a>
+
+          </footer>
+
+        </article>
+      </div>
+
+      <!-- משרה 3 -->
+      <div class="col-md-4 mb-4">
+        <article class="job-card h-100">
+
+          <header class="job-header">
+
+            <h3 class="job-title">
+              מנהל/ת עבודה – תשתיות ובנייה
+            </h3>
+
+            <p class="job-location">
+              משרה מלאה · שטח
+            </p>
+
+          </header>
+
+          <div class="job-body">
+
+            <h5 class="job-subtitle">
+              תיאור המשרה
+            </h5>
+
+            <p class="job-text">
+              בטיחות, ניהול ובקרה על עבודות תשתית ובנייה בשטח,
+              ניהול צוותי ביצוע, אחריות על לו"ז, איכות ובטיחות,
+              תיאום בין גורמי הפרויקט ודיווח שוטף למנהל הפרויקט.
+            </p>
+
+            <h6 class="job-subsubtitle">
+              דרישות התפקיד
+            </h6>
+
+            <ul class="job-list">
+              <li>ניסיון קודם כמנהל/ת עבודה בתחום התשתיות / הבנייה.</li>
+              <li>ניסיון בעבודה מול קבלנים וגופים ציבוריים.</li>
+              <li>יכולת ניהול והובלת צוותים, עמידה בלוחות זמנים.</li>
+              <li>אחריות אישית גבוהה ויחסי אנוש מעולים.</li>
+            </ul>
+
+          </div>
+
+          <footer class="job-footer">
+
+            <p class="job-note">
+              יתרון לניסיון בעבודה מול תאגידי מים ורשויות מקומיות.
+            </p>
+
+            <a
+              href="#general-application"
+              class="btn btn-primary job-apply-btn"
+            >
+              שליחת מועמדות למשרה
+            </a>
+
+          </footer>
+
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- טופס מועמדות כללי -->
+<section
+  id="general-application"
+  class="jobs-apply-section py-5 bg-light"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <div class="jobs-apply-card">
+
+          <!-- הודעות הצלחה ושגיאה -->
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+
+              <div class="jobs-alerts mb-4">
+
+                {% for category, message in messages %}
+
+                  <div
+                    class="alert alert-{{ category }} alert-dismissible fade show"
+                    role="alert"
+                  >
+                    {{ message }}
+
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="alert"
+                      aria-label="סגירת ההודעה"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+
+                  </div>
+
+                {% endfor %}
+
+              </div>
+
+            {% endif %}
+          {% endwith %}
+
+          <h3 class="jobs-bottom-title mb-3 text-center">
+            שליחת קורות חיים
+          </h3>
+
+          <p class="jobs-bottom-text text-center mb-4">
+            ניתן לשלוח קורות חיים לכל אחת מהמשרות או לשלוח מועמדות כללית,
+            ונחזור אליכם בהקדם.
+          </p>
+
+          <form
+            method="POST"
+            action="{{ url_for('contact') }}"
+            enctype="multipart/form-data"
+            class="contact-form"
+          >
+
+            <div class="form-row">
+
+              <div class="form-group col-md-6">
+
+                <label for="apply_name">
+                  שם מלא
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apply_name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                >
+
+              </div>
+
+              <div class="form-group col-md-6">
+
+                <label for="apply_phone">
+                  טלפון
+                </label>
+
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="apply_phone"
+                  name="phone"
+                  autocomplete="tel"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="apply_email">
+                דוא"ל
+              </label>
+
+              <input
+                type="email"
+                class="form-control"
+                id="apply_email"
+                name="email"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="apply_topic">
+                משרה מבוקשת
+              </label>
+
+              <select
+                id="apply_topic"
+                name="topic"
+                class="form-control"
+                required
+              >
+
+                <option value="מועמדות כללית">
+                  מועמדות כללית
+                </option>
+
+                <option value="הנדסאי אזרחי – בניין">
+                  הנדסאי/ת אזרחי/ת – בניין
+                </option>
+
+                <option value="מהנדס אזרחי">
+                  מהנדס/ת אזרחי/ת
+                </option>
+
+                <option value="מנהל עבודה – תשתיות ובנייה">
+                  מנהל/ת עבודה – תשתיות ובנייה
+                </option>
+
+              </select>
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="apply_message">
+                הודעה / פרטים נוספים
+              </label>
+
+              <textarea
+                id="apply_message"
+                name="message"
+                rows="4"
+                class="form-control"
+              ></textarea>
+
+            </div>
+
+            <!-- צירוף קורות חיים -->
+            <div class="form-group">
+
+              <label for="cv_file">
+                צירוף קורות חיים
+              </label>
+
+              <div class="cv-upload-wrapper">
+
+                <input
+                  type="file"
+                  id="cv_file"
+                  name="cv_file"
+                  class="cv-file-input"
+                  accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                >
+
+                <label
+                  for="cv_file"
+                  class="cv-upload-button"
+                >
+                  <i
+                    class="fa fa-paperclip"
+                    aria-hidden="true"
+                  ></i>
+
+                  בחירת קובץ
+                </label>
+
+                <span
+                  id="cv-file-name"
+                  class="cv-file-name"
+                  aria-live="polite"
+                >
+                  לא נבחר קובץ
+                </span>
+
+              </div>
+
+              <small class="form-text text-muted">
+                ניתן לצרף קובץ PDF או Word עד 5MB.
+              </small>
+
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-block"
+            >
+              שליחת מועמדות
+            </button>
+
+          </form>
+
+          <p class="small text-muted text-center mt-3 mb-0">
+            ניתן גם לשלוח קורות חיים ישירות ל־
+
+            <a href="mailto:avi.askapa1@gmail.com">
+              avi.askapa1@gmail.com
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fileInput = document.getElementById("cv_file");
+    const fileName = document.getElementById("cv-file-name");
+
+    if (!fileInput || !fileName) {
+      return;
+    }
+
+    fileInput.addEventListener("change", function () {
+      if (this.files && this.files.length > 0) {
+        fileName.textContent = this.files[0].name;
+      } else {
+        fileName.textContent = "לא נבחר קובץ";
+      }
+    });
+  });
+</script>
+{% endblock %}

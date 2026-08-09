@@ -1,0 +1,374 @@
+{% extends "base.html" %}
+
+{% block title %}ניהול ופיקוח עבודות גינון – אוגדן מהנדסים{% endblock %}
+
+{% block extra_head %}
+  <!-- Lightbox CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+  >
+
+  <!-- CSS של הגלריה -->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='services_style/accessibility.css') }}"
+  >
+{% endblock %}
+
+{% block content %}
+
+<section class="gallery-hero py-5">
+  <div class="container text-center">
+
+    <h1 class="section-title mb-3">
+      ניהול ופיקוח עבודות גינון
+    </h1>
+
+    <p class="section-subtitle mb-2">
+      פיקוח על עבודות תכנון וביצוע של פיתוח וגינון.
+    </p>
+
+    <p class="section-subtitle small text-muted mb-0">
+      כל התמונות מציגות פרויקטים בתחום ניהול ופיקוח עבודות גינון,
+      אשר לוו ונוהלו על ידי אוגדן מהנדסים.
+    </p>
+
+  </div>
+</section>
+
+<section class="gallery-section pb-5">
+  <div class="container">
+
+    <div class="gallery-grid">
+
+      <!-- תמונה 1 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard1.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="ניהול ופיקוח על עבודות גינון"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard1.jpg') }}"
+          class="gallery-img"
+          alt="ניהול ופיקוח על עבודות גינון"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 2 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard2.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="תכנון ופיתוח גינון"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard2.jpg') }}"
+          class="gallery-img"
+          alt="תכנון ופיתוח גינון"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 3 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard3.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="עבודות גינון ופיתוח סביבתי"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard3.jpg') }}"
+          class="gallery-img"
+          alt="עבודות גינון ופיתוח סביבתי"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 4 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard4.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="פיתוח שטחים ירוקים"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard4.jpg') }}"
+          class="gallery-img"
+          alt="פיתוח שטחים ירוקים"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 5 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard5.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="פיקוח על הקמת גינות"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard5.jpg') }}"
+          class="gallery-img"
+          alt="פיקוח על הקמת גינות"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 6 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard6.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="עבודות פיתוח וגינון"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard6.jpg') }}"
+          class="gallery-img"
+          alt="עבודות פיתוח וגינון"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 7 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard7.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="פיתוח נוף ושטחים ציבוריים"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard7.jpg') }}"
+          class="gallery-img"
+          alt="פיתוח נוף ושטחים ציבוריים"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 8 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard8.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="תכנון גינון במרחב הציבורי"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard8.jpg') }}"
+          class="gallery-img"
+          alt="תכנון גינון במרחב הציבורי"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 9 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard9.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="הקמת שטחים ירוקים"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard9.jpg') }}"
+          class="gallery-img"
+          alt="הקמת שטחים ירוקים"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 10 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard10.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="פיקוח על עבודות פיתוח נוף"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard10.jpg') }}"
+          class="gallery-img"
+          alt="פיקוח על עבודות פיתוח נוף"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 11 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard11.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="עבודות שתילה וגינון"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard11.jpg') }}"
+          class="gallery-img"
+          alt="עבודות שתילה וגינון"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 12 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard12.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="פיתוח סביבתי וגינון"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard12.jpg') }}"
+          class="gallery-img"
+          alt="פיתוח סביבתי וגינון"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 13 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard13.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="תכנון וביצוע עבודות גינון"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard13.jpg') }}"
+          class="gallery-img"
+          alt="תכנון וביצוע עבודות גינון"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 14 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard14.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="גינון ופיתוח במרחב עירוני"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard14.jpg') }}"
+          class="gallery-img"
+          alt="גינון ופיתוח במרחב עירוני"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 15 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard15.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="פיקוח על עבודות גינון ציבורי"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard15.jpg') }}"
+          class="gallery-img"
+          alt="פיקוח על עבודות גינון ציבורי"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 16 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard16.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="פיתוח גינות ושטחים פתוחים"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard16.jpg') }}"
+          class="gallery-img"
+          alt="פיתוח גינות ושטחים פתוחים"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 17 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard17.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="עבודות פיתוח נוף"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard17.jpg') }}"
+          class="gallery-img"
+          alt="עבודות פיתוח נוף"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 18 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard18.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="הקמת גינות במרחב הציבורי"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard18.jpg') }}"
+          class="gallery-img"
+          alt="הקמת גינות במרחב הציבורי"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 19 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard19.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="ניהול עבודות גינון ופיתוח"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard19.jpg') }}"
+          class="gallery-img"
+          alt="ניהול עבודות גינון ופיתוח"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 20 -->
+      <a
+        href="{{ url_for('static', filename='img/gardening/gard20.jpg') }}"
+        data-lightbox="gardening-gallery"
+        data-title="פרויקט פיתוח וגינון"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/gardening/gard20.jpg') }}"
+          class="gallery-img"
+          alt="פרויקט פיתוח וגינון"
+          loading="lazy"
+        >
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof lightbox !== "undefined") {
+        lightbox.option({
+          resizeDuration: 250,
+          fadeDuration: 250,
+          imageFadeDuration: 250,
+          wrapAround: true,
+          disableScrolling: true,
+          fitImagesInViewport: true,
+          alwaysShowNavOnTouchDevices: true,
+          albumLabel: "תמונה %1 מתוך %2"
+        });
+      } else {
+        console.error("Lightbox לא נטען");
+      }
+    });
+  </script>
+{% endblock %}

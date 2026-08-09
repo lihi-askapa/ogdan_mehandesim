@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}פיתוח עירוני – אוגדן מהנדסים{% endblock %}
+
+{% block extra_head %}
+  <!-- Lightbox CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+  >
+
+  <!-- CSS של הגלריה -->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='services_style/accessibility.css') }}"
+  >
+{% endblock %}
+
+{% block content %}
+
+<section class="gallery-hero py-5">
+  <div class="container text-center">
+
+    <h1 class="section-title mb-3">
+      פיתוח עירוני
+    </h1>
+
+    <p class="section-subtitle mb-2">
+      ניהול ופיקוח על פיתוח שכונות בהקמה ותחזוקה של שכונות קיימות.
+      תשתיות תת־קרקעיות כגון בזק, הוט, חברת חשמל ותשתיות רטובות,
+      וכן תשתיות עיליות כגון מדרכות, כבישים, שטחים ציבוריים פתוחים,
+      גינון ונגישות.
+    </p>
+
+    <p class="section-subtitle small text-muted mb-0">
+      כל התמונות מציגות פרויקטים בתחום הפיתוח העירוני אשר לוו ונוהלו
+      על ידי אוגדן מהנדסים.
+    </p>
+
+  </div>
+</section>
+
+<section class="gallery-section pb-5">
+  <div class="container">
+
+    <div class="gallery-grid">
+
+      {% for image_number in range(1, 33) %}
+
+        <a
+          href="{{ url_for(
+            'static',
+            filename='img/urban_development/urban' ~ image_number ~ '.jpg'
+          ) }}"
+          data-lightbox="urban-development-gallery"
+          data-title="פרויקט פיתוח עירוני – תמונה {{ image_number }}"
+          class="gallery-item"
+        >
+
+          <img
+            src="{{ url_for(
+              'static',
+              filename='img/urban_development/urban' ~ image_number ~ '.jpg'
+            ) }}"
+            class="gallery-img"
+            alt="פרויקט פיתוח עירוני – תמונה {{ image_number }}"
+            loading="lazy"
+          >
+
+        </a>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof lightbox !== "undefined") {
+        lightbox.option({
+          resizeDuration: 250,
+          fadeDuration: 250,
+          imageFadeDuration: 250,
+          wrapAround: true,
+          disableScrolling: true,
+          fitImagesInViewport: true,
+          alwaysShowNavOnTouchDevices: true,
+          albumLabel: "תמונה %1 מתוך %2"
+        });
+      } else {
+        console.error("Lightbox לא נטען");
+      }
+    });
+  </script>
+{% endblock %}

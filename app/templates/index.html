@@ -1,0 +1,1096 @@
+{% extends "base.html" %}
+
+{% block title %}אוגדן מהנדסים - אבי אסקפה{% endblock %}
+
+{% block content %}
+
+<!-- ===== HERO VIDEO מלא מסך ===== -->
+<section class="hero-full-video">
+
+  <!-- שכבת וידאו מטושטשת ברקע - ממלאת את כל השטח בלי קצוות שחורים -->
+  <video class="hero-video-blur" autoplay muted loop playsinline>
+    <source
+      src="{{ url_for('static', filename='img/video/mainmovie.mp4') }}"
+      type="video/mp4"
+    >
+  </video>
+
+  <!-- הווידאו הראשי - מוצג במלואו בלי חיתוך -->
+  <video class="hero-bg-video" autoplay muted loop playsinline>
+    <source
+      src="{{ url_for('static', filename='img/video/mainmovie.mp4') }}"
+      type="video/mp4" 
+    >
+    הדפדפן שלך לא תומך בווידאו.
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content container">
+    <div class="hero-text-box">
+
+      <h1 class="hero-title mb-3">אבי אסקפה</h1>
+
+      <h2 class="hero-subtitle mb-3">אוגדן מהנדסים</h2>
+
+      <p class="hero-text mb-4">
+        חברה המתמחה בהנדסה, ניהול, פיקוח, נגישות ובטיחות.
+      </p>
+
+      <div class="hero-actions mb-3">
+        <a href="#contact" class="btn btn-primary btn-lg mb-2">
+          צור קשר
+        </a>
+
+        <a
+          href="#services"
+          class="btn btn-outline-light btn-lg mb-2 ms-lg-2"
+        >
+          צפו בשירותים
+        </a>
+      </div>
+
+      <!-- שורת חיפוש -->
+      <div class="hero-search-wrapper">
+        <form
+          id="service-search-form"
+          class="hero-search-form"
+          action="#services"
+        >
+          <div class="hero-search-inner">
+
+            <input
+              id="service-search-input"
+              type="text"
+              class="hero-search-input"
+              placeholder="חפשו שירות או תחום (נגישות, גז, מים, כבישים...)"
+              aria-label="חיפוש שירותים"
+            >
+
+            <button type="submit" class="hero-search-button">
+              חיפוש
+            </button>
+
+          </div>
+
+          <p
+            id="service-search-results"
+            class="hero-search-results small mt-2"
+          ></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== מי אנחנו ===== -->
+<section id="about-short" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-md-4 mb-4 mb-md-0 text-center">
+        <img
+          src="{{ url_for('static', filename='img/index_img/f5e8b938-3476-4ce3-b7cf-bc6693e261c2.jpg') }}"
+          class="about-avatar img-fluid rounded-lg"
+          alt="אבי אסקפה"
+        >
+      </div>
+
+      <div class="col-md-8">
+
+        <h3 class="section-title mb-3">מי אנחנו</h3>
+
+        <p class="mb-2">
+          אוגדן מהנדסים, בניהולו של אבי אסקפה, מעניק שירותי ניהול,
+          פיקוח ונגישות בפרויקטי תשתיות ובנייה עבור רשויות מקומיות,
+          תאגידי מים, גופים ציבוריים ולקוחות פרטיים.
+        </p>
+
+        <p class="mb-3">
+          עם ניסיון של מעל 26 שנים, המשרד מלווה פרויקטים משלב התכנון
+          ועד המסירה, בדגש על איכות ביצוע, עמידה בתקנים ושיתוף פעולה
+          מלא עם הלקוח.
+        </p>
+
+        <a href="{{ url_for('about') }}" class="btn btn-link p-0">
+          קראו עוד על אבי אסקפה והמשרד ←
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== סטטיסטיקות ===== -->
+<section class="stats-section py-5" id="company-stats">
+  <div class="container">
+
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-8">
+
+        <h2 class="section-title mb-3">
+          אבי אסקפה - אוגדן מהנדסים במספרים
+        </h2>
+
+        <p class="section-subtitle">
+          ניסיון מצטבר בעשרות פרויקטים בתחום התשתיות, המים,
+          הביוב והבנייה הציבורית.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="row text-center stats-row">
+
+      <!-- פריט 1 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="stat-item">
+
+          <div class="stat-number-wrapper stat-blue">
+            <span class="stat-plus">+</span>
+            <span
+              class="stat-number stat-blue"
+              data-target="26"
+            >
+              0
+            </span>
+          </div>
+
+          <p class="stat-label">שנות ניסיון</p>
+
+        </div>
+      </div>
+
+      <!-- פריט 2 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="stat-item">
+
+          <div class="stat-number-wrapper stat-lightblue">
+            <span class="stat-plus">+</span>
+            <span
+              class="stat-number stat-lightblue"
+              data-target="1700"
+            >
+              0
+            </span>
+          </div>
+
+          <p class="stat-label">פרויקטים בפיקוח וליווי</p>
+
+        </div>
+      </div>
+
+      <!-- פריט 3 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="stat-item">
+
+          <div class="stat-number-wrapper stat-orange">
+            <span class="stat-plus">+</span>
+            <span
+              class="stat-number stat-orange"
+              data-target="20"
+            >
+              0
+            </span>
+          </div>
+
+          <p class="stat-label">רשויות ותאגידי מים</p>
+
+        </div>
+      </div>
+
+      <!-- פריט 4 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="stat-item">
+
+          <div class="stat-number-wrapper stat-green">
+            <span class="stat-plus">+</span>
+            <span
+              class="stat-number stat-green"
+              data-target="105"
+            >
+              0
+            </span>
+          </div>
+
+          <p class="stat-label">מיליוני ש"ח היקף עבודות</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== שירותים ===== -->
+<section id="services" class="py-5">
+  <div class="container">
+
+    <h3 class="section-title text-center mb-2">
+      תחומי התמחות ושירותים
+    </h3>
+
+    <p class="section-subtitle text-center mb-5">
+      מגוון שירותי הנדסה, ניהול ופיקוח לפרויקטים בתחום הבנייה,
+      התשתיות, הנגישות והבטיחות.
+    </p>
+
+    <div class="row">
+
+      <!-- נגישות -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-wheelchair"></i>
+          </div>
+
+          <h4 class="service-title">
+            יועץ נגישות - מתו״ס ושירות
+          </h4>
+
+          <p class="service-text">
+            סקרי נגישות, תכנון פתרונות נגישות, ליווי בקבלת אישורים
+            ותמיכה ברשויות ועסקים.
+          </p>
+
+          <a
+            href="{{ url_for('accessibility') }}"
+            class="service-link"
+          >
+            צפו בגלריית פרויקטי נגישות
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ניהול ופיקוח עבודות בנייה -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-wrench"></i>
+          </div>
+
+          <h4 class="service-title">
+            ניהול ופיקוח עבודות בנייה
+          </h4>
+
+          <p class="service-text">
+            ליווי וניהול פרויקטים מבית פרטי ועד מתחמים ציבוריים,
+            כולל פיקוח צמוד בשטח.
+          </p>
+
+          <a
+            href="{{ url_for('supervision_management') }}"
+            class="service-link"
+          >
+            צפו בגלריית עבודות בנייה
+          </a>
+
+        </div>
+      </div>
+
+      <!-- עבודות עפר וכבישים -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-car"></i>
+          </div>
+
+          <h4 class="service-title">
+            עבודות עפר וכבישים
+          </h4>
+
+          <p class="service-text">
+            פיקוח על עבודות עפר, הכנת מבנה כביש וסלילה או ריבוד
+            בפרויקטים עירוניים ובין־עירוניים.
+          </p>
+
+          <a
+            href="{{ url_for('earth_development') }}"
+            class="service-link"
+          >
+            צפו בגלריית עבודות כבישים
+          </a>
+
+        </div>
+      </div>
+
+      <!-- גינון -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-tree"></i>
+          </div>
+
+          <h4 class="service-title">
+            ניהול ופיקוח עבודות גינון
+          </h4>
+
+          <p class="service-text">
+            פיקוח על עבודות תכנון וביצוע פיתוח גינון.
+          </p>
+
+          <a
+            href="{{ url_for('gardening') }}"
+            class="service-link"
+          >
+            צפו בגלריית גינון
+          </a>
+
+        </div>
+      </div>
+
+      <!-- פיתוח עירוני -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-building"></i>
+          </div>
+
+          <h4 class="service-title">
+            פיתוח עירוני
+          </h4>
+
+          <p class="service-text">
+            ליווי פרויקטים רחבי היקף: שכונות חדשות ותשתיות עירוניות.
+          </p>
+
+          <a
+            href="{{ url_for('urban_development') }}"
+            class="service-link"
+          >
+            צפו בגלריית פיתוח ותשתיות
+          </a>
+
+        </div>
+      </div>
+
+      <!-- גז ודלק -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-fire-extinguisher"></i>
+          </div>
+
+          <h4 class="service-title">
+            ניהול ופיקוח על תשתיות גז ודלק
+          </h4>
+
+          <p class="service-text">
+            ניהול ופיקוח על תשתיות גז ודלק, הקמת קווים חדשים
+            ואחזקת קווי דלק וגז.
+          </p>
+
+          <a
+            href="{{ url_for('fuel_and_gas') }}"
+            class="service-link"
+          >
+            צפו בגלריית תשתיות גז ודלק
+          </a>
+
+        </div>
+      </div>
+
+      <!-- מים וביוב -->
+       <!--
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-tint"></i>
+          </div>
+
+          <h4 class="service-title">
+            ניהול ופיקוח תשתיות ביוב, מים וניקוז במקורות,
+            תאגידי מים וברשויות מקומיות
+          </h4>
+
+          <p class="service-text">
+            ניהול תכנון, ניהול ופיקוח, בקרת איכות, הבטחת איכות,
+            היתרים, אישורים, ליווי וייעוץ הנדסי.
+          </p>
+
+          <a
+            href="{{ url_for('water_corporations') }}"
+            class="service-link"
+          >
+            צפו בגלריית תשתיות ביוב, מים וניקוז
+          </a>
+
+        </div>
+      </div>
+
+    
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-university"></i>
+          </div>
+
+          <h4 class="service-title">
+            יועץ קונסטרוקציה
+          </h4>
+
+          <p class="service-text">
+            תכנון וניתוח שלד המבנה בהתאם לתקנים, כולל בדיקות עומסים,
+            יציבות, בטיחות וחישובי קונסטרוקציה. התאמת תוכניות לביצוע
+            בשטח וליווי הנדסי במהלך הבנייה.
+          </p>
+
+          <a
+            href="{{ url_for('water_corporations') }}"
+            class="service-link"
+          >
+            צפו בגלריית יועץ קונסטרוקציה
+          </a>
+
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-shower"></i>
+          </div>
+
+          <h4 class="service-title">
+            יועץ אינסטלציה
+          </h4>
+
+          <p class="service-text">
+            תכנון מערכות מים ואינסטלציה למבנים, כולל מערכות מים
+            חמים וקרים, ניקוז, ביוב, מערכות לחץ ובדיקות תקינות.
+            ליווי מלא משלב התכנון ועד לביצוע בשטח.
+          </p>
+
+          <a
+            href="{{ url_for('water_corporations') }}"
+            class="service-link"
+          >
+            צפו בגלריית יועץ אינסטלציה
+          </a>
+
+        </div>
+      </div>
+
+  
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-snowflake-o"></i>
+          </div>
+
+          <h4 class="service-title">
+            תכנון מיזוג אוויר
+          </h4>
+
+          <p class="service-text">
+            תכנון מערכות מיזוג אוויר למבני ציבור ומבני מגורים,
+            כולל אוורור, חישובי עומסים, בחירת מערכות ותיאום מול
+            קבלנים בשטח.
+          </p>
+
+          <a
+            href="{{ url_for('water_corporations') }}"
+            class="service-link"
+          >
+            צפו בגלריית תכנון מיזוג אוויר
+          </a>
+
+        </div>
+      </div>
+
+    
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-tree"></i>
+          </div>
+
+          <h4 class="service-title">
+            יועץ פיתוח ואדריכלות נוף
+          </h4>
+
+          <p class="service-text">
+            תכנון ופיתוח סביבתי, אדריכלות נוף, שטחים פתוחים,
+            שצ"פים וגינות ציבוריות. ליווי מלא משלב התכנון
+            ועד ביצוע בשטח.
+          </p>
+
+          <a
+            href="{{ url_for('water_corporations') }}"
+            class="service-link"
+          >
+            צפו בגלריית יועץ פיתוח ואדריכלות נוף
+          </a>
+
+        </div>
+      </div>
+
+   
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-fire"></i>
+          </div>
+
+          <h4 class="service-title">
+            יועץ בטיחות אש
+          </h4>
+
+          <p class="service-text">
+            ליווי ותכנון מערכות בטיחות אש למבנים, כולל הכנת
+            תוכניות לבטיחות אש, תכנון מערכות גילוי וכיבוי,
+            עמידה בדרישות רשות הכבאות, בדיקות תקינות וליווי
+            עד לקבלת אישורים סופיים.
+          </p>
+
+          <a
+            href="{{ url_for('water_corporations') }}"
+            class="service-link"
+          >
+            צפו בגלריית יועץ בטיחות אש
+          </a>
+
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-shield"></i>
+          </div>
+
+          <h4 class="service-title">
+            יועץ מיגון
+          </h4>
+
+          <p class="service-text">
+            ייעוץ מקצועי בתחום מיגון מבנים, תכנון מרחבים מוגנים,
+            בדיקת עמידות, תכנון אלמנטים מבניים להגנה מפני פגיעות
+            וליווי בביצוע באתר.
+          </p>
+
+          <a
+            href="{{ url_for('water_corporations') }}"
+            class="service-link"
+          >
+            צפו בגלריית יועץ מיגון
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-university"></i>
+          </div>
+
+          <h4 class="service-title">
+            שימור מבנים
+          </h4>
+
+          <p class="service-text">
+            ניהול ופיקוח על עבודות שימור ושיקום מבנים,
+            תוך שמירה על אופיו המקורי של המבנה ועמידה
+            בדרישות הרשויות.
+          </p>
+
+          <a
+            href="{{ url_for('water_corporations') }}"
+            class="service-link"
+          >
+            צפו בגלריית שימור המבנים
+          </a>
+
+        </div>
+      </div>
+
+   
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="service-card h-100">
+
+          <div class="service-icon">
+            <i class="fa fa-volume-up"></i>
+          </div>
+
+          <h4 class="service-title">
+            יועץ אקוסטיקה
+          </h4>
+
+          <p class="service-text">
+            בדיקות רעש ופתרונות אקוסטיים במבנים ציבוריים ופרטיים,
+            תכנון בידוד מרעש, מדידות בשטח, עמידה בדרישות התקן
+            וליווי בביצוע.
+          </p>
+
+          <a
+            href="{{ url_for('water_corporations') }}"
+            class="service-link"
+          >
+            צפו בגלריית יועץ אקוסטיקה
+          </a>
+
+        </div>
+      </div>
+    -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== פרויקטים נבחרים ===== -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+
+    <h3 class="section-title text-center mb-2">
+      פרויקטים נבחרים
+    </h3>
+
+    <p class="section-subtitle text-center mb-5">
+      חלק קטן ממגוון הפרויקטים שבוצעו עבור רשויות,
+      תאגידי מים וגופים ציבוריים.
+    </p>
+
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <div class="project-card">
+
+          <video
+            class="project-video"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source
+              src="{{ url_for('static', filename='img/video/20250408_184454 (video-converter.com).mp4') }}"
+              type="video/mp4"
+            >
+            הדפדפן שלך לא תומך בווידאו.
+          </video>
+
+          <div class="project-body">
+            <h5 class="project-title">
+              דיפון קירות סלארי
+            </h5>
+
+            <p class="project-meta">
+              חברת מקורות
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="project-card">
+
+          <video
+            class="project-video"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source
+              src="{{ url_for('static', filename='img/video/20200526_111711.mp4') }}"
+              type="video/mp4"
+            >
+            הדפדפן שלך לא תומך בווידאו.
+          </video>
+
+          <div class="project-body">
+            <h5 class="project-title">
+              דיפון קירות סלארי
+            </h5>
+
+            <p class="project-meta">
+              חברת מקורות
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="project-card">
+
+          <video
+            class="project-video"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source
+              src="{{ url_for('static', filename='img/video/VIDEO-2025-11-29-21-15-11.mp4') }}"
+              type="video/mp4"
+            >
+            הדפדפן שלך לא תומך בווידאו.
+          </video>
+
+          <div class="project-body">
+            <h5 class="project-title">
+              שיקום תשתיות מים וביוב
+            </h5>
+
+            <p class="project-meta">
+              תאגיד מים עירוני
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== לקוחות ===== -->
+<section id="clients" class="py-5">
+  <div class="container">
+
+    <h3 class="section-title text-center mb-4">
+      הלקוחות שלנו
+    </h3>
+
+    <div class="logos-slider">
+      <div class="logos-track">
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_ashdod.png') }}"
+          alt="עיריית אשדוד"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_Gan_Yavne_COA.png') }}"
+          alt="מועצת גן יבנה"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_gedera.png') }}"
+          alt="מועצת גדרה"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_logo_modiin_water.png') }}"
+          alt="תאגיד מי מודיעין"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_modin.png') }}"
+          alt="עיריית מודיעין"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_tamar.png') }}"
+          alt="מועצה אזורית תמר"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_tlv.png') }}"
+          alt="עיריית תל אביב"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_yavne.png') }}"
+          alt="עיריית יבנה"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_yuvalim.png') }}"
+          alt="יובלים"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cusMekorot.png') }}"
+          alt="מקורות"
+        >
+
+        <!-- שכפול הלוגואים לצורך אנימציה רציפה -->
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_ashdod.png') }}"
+          alt="עיריית אשדוד"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_Gan_Yavne_COA.png') }}"
+          alt="מועצת גן יבנה"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_gedera.png') }}"
+          alt="מועצת גדרה"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_logo_modiin_water.png') }}"
+          alt="תאגיד מי מודיעין"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_modin.png') }}"
+          alt="עיריית מודיעין"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_tamar.png') }}"
+          alt="מועצה אזורית תמר"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_tlv.png') }}"
+          alt="עיריית תל אביב"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_yavne.png') }}"
+          alt="עיריית יבנה"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cus_yuvalim.png') }}"
+          alt="יובלים"
+        >
+
+        <img
+          src="{{ url_for('static', filename='img/index_img/customers_img/cusMekorot.png') }}"
+          alt="מקורות"
+        >
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== צור קשר ===== -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+
+    <div class="contact-card-wrapper">
+
+      <!-- הודעות הצלחה ושגיאה -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+
+          <div class="contact-alerts mb-4">
+
+            {% for category, message in messages %}
+
+              <div
+                class="alert alert-{{ category }} alert-dismissible fade show"
+                role="alert"
+              >
+                {{ message }}
+
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="alert"
+                  aria-label="סגירת ההודעה"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+            {% endfor %}
+
+          </div>
+
+        {% endif %}
+      {% endwith %}
+
+      <h3 class="section-title text-center mb-2">
+        צור קשר
+      </h3>
+
+      <p class="section-subtitle text-center mb-4">
+        נשמח לשוחח על הפרויקט הבא שלכם ולהציע פתרון הנדסי
+        וייעוץ מותאם.
+      </p>
+
+      <div class="contact-quick-info text-center mb-4">
+
+        <span>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+
+          <a href="tel:0549451327">
+            054-9451327
+          </a>
+        </span>
+
+        <span class="mx-3">|</span>
+
+        <span>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+
+          <a href="mailto:avi.askapa1@gmail.com">
+            avi.askapa1@gmail.com
+          </a>
+        </span>
+
+        <span class="mx-3">|</span>
+
+        <span>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          איילה טווארס, עמק 2 באר יעקב, בניין A, קומה 3
+        </span>
+
+      </div>
+
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 col-md-10">
+
+          <form
+            method="POST"
+            action="{{ url_for('contact') }}"
+            class="contact-form"
+          >
+
+            <div class="form-row">
+
+              <div class="form-group col-md-6">
+                <label for="name">
+                  שם מלא
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="phone">
+                  טלפון
+                </label>
+
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  autocomplete="tel"
+                  required
+                >
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                דוא"ל
+              </label>
+
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="topic">
+                נושא / תחום
+              </label>
+
+              <select
+                id="topic"
+                name="topic"
+                class="form-control"
+                required
+              >
+                <option value="נגישות">
+                  נגישות
+                </option>
+
+                <option value="ניהול ופיקוח בנייה">
+                  ניהול ופיקוח בנייה
+                </option>
+
+                <option value="תשתיות מים וביוב">
+                  תשתיות מים וביוב
+                </option>
+
+                <option value="כבישים ותשתיות">
+                  כבישים ותשתיות
+                </option>
+
+                <option value="גינון ושצפים">
+                  גינון ושצ"פים
+                </option>
+
+                <option value="שימור מבנים">
+                  שימור מבנים
+                </option>
+
+                <option value="ייעוץ הנדסי">
+                  ייעוץ הנדסי
+                </option>
+
+                <option value="אחר">
+                  אחר
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                הודעה
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="form-control"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-block"
+            >
+              שלחו פנייה
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

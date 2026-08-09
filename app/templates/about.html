@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+
+{% block title %}פרופיל החברה – אוגדן מהנדסים{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO עליון – פרופיל חברה -->
+<section class="about-hero py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- טקסט פתיחה -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <p class="about-kicker mb-2">אבי אסקפה • אוגדן מהנדסים</p>
+        <h1 class="section-title mb-3">פרופיל החברה</h1>
+        <p class="section-subtitle mb-3">
+          אוגדן מהנדסים הוא משרד הנדסה המתמחה בניהול, תכנון, פיקוח ,נגישות ובטיחות בפרויקטי תשתיות,
+          מים, ביוב, כבישים ופיתוח עירוני עבור רשויות מקומיות, תאגידי מים, גופים ציבוריים ולקוחות פרטיים.
+        </p>
+        <p class="section-subtitle text-muted mb-0">
+          המשרד מנוהל על ידי אבי אסקפה, מהנדס בעל ניסיון של מעל 26 שנים בניהול וביצוע
+          פרויקטים מורכבים בהיקפים גדולים.
+        </p>
+      </div>
+
+      <!-- כרטיס פרטי קשר קטן -->
+      <div class="col-lg-5">
+        <div class="about-contact-card">
+          <h5 class="mb-3">פרטי התקשרות</h5>
+          <p class="mb-1"><i class="fa fa-phone"></i>
+            <a href="tel:0549451327">054-9451327</a>
+          </p>
+          <p class="mb-1"><i class="fa fa-envelope"></i>
+            <a href="mailto:avi.askapa1@gmail.com">avi.askapa1@gmail.com</a>
+          </p>
+          <p class="mb-2"><i class="fa fa-map-marker"></i>
+           איילה טווארס, עמק 2 באר יעקוב, בניין A קומה 3
+          </p>
+          <p class="small text-muted mb-0">
+            ניתן לפנות גם דרך וואטסאפ באמצעות הכפתור הירוק המופיע במסך.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- מייסד החברה -->
+<section class="about-founder py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- תמונה -->
+      <div class="col-md-4 mb-4 mb-md-0 text-center">
+        <div class="about-founder-photo-wrapper">
+          <img
+            src="{{ url_for('static', filename='img/index_img/f5e8b938-3476-4ce3-b7cf-bc6693e261c2.jpg') }}"
+            alt="אבי אסקפה"
+            class="about-founder-photo img-fluid"
+          >
+        </div>
+      </div>
+
+      <!-- טקסט -->
+      <div class="col-md-8">
+        <h2 class="about-section-title mb-2">המייסד והבעלים – אבי אסקפה</h2>
+        <p class="about-founder-lead mb-3">
+          הנדסאי אזרחי, מומחה בניהול, פיקוח ונגישות בפרויקטי תשתיות ובנייה,
+          בעל ניסיון רב בליווי פרויקטים עבור רשויות, תאגידי מים וגופים ציבוריים.
+        </p>
+
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <h6 class="about-mini-title">השכלה ורקע מקצועי</h6>
+            <ul class="about-list">
+              <li>בוגר תואר ראשון במנהל עסקים – אוניברסיטת דרבי.</li>
+              <li>הנדסאי אזרחי רשום בפנקס ההנדסאים – אוניברסיטת תל אביב.</li>
+              <li>קורסים והכשרות בתחומי פיקוח, ניהול ונגישות.</li>
+            </ul>
+          </div>
+          <div class="col-sm-6 mb-3">
+            <h6 class="about-mini-title">תפקידים מרכזיים בעבר</h6>
+            <ul class="about-list">
+              <li>מנהל ומפקח פרויקטים בחברת מקורות בתאגידי מים.</li>
+              <li>מנהל פרויקטים בתחום תשתיות ובנייה ציבורית.</li>
+              <li>יועץ נגישות מת׳וס, שירות, פיתוח ושצ"פים.</li>
+              <li>סוקר איכות מבנים ומנת חוות דעת בבתי משפט.</li>
+              <li>ממונה בטיחות ויועץ בטיחות למוסדות ופרטיים.</li>
+              <li>יועץ כיבוי אש.</li>
+              <li>מנהל פרוייקטים בתחום שימור מבנים.</li>
+              <li>מרצה במכללת רופין לקורס מפקחי מים וביוב.</li>
+              <li>מנהל עבודה מוסמך של משרד העבודה.</li>
+              <li>בודק מז״חים מוסמך באישור משרד הבריאות.</li>
+              <li>מנהל ומפקח אתרי שימור.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- בלוקי מידע עסקיים: ניסיון • פרויקטים • לקוחות -->
+<section class="about-highlights py-5 bg-light">
+  <div class="container">
+    <div class="row mb-4 text-center">
+      <div class="col">
+        <h2 class="about-section-title mb-2">מה אנחנו מביאים לשולחן</h2>
+        <p class="section-subtitle mb-0">
+          ניסיון מצטבר, הבנה מערכתית ויכולת לנהל פרויקטים משלב הרעיון ועד המסירה.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- ניסיון -->
+      <div class="col-md-4 mb-4">
+        <div class="about-highlight-card h-100">
+          <div class="about-highlight-icon">
+            <i class="fa fa-briefcase"></i>
+          </div>
+          <h3 class="about-highlight-title">ניסיון וותק</h3>
+          <p class="about-highlight-text">
+            מעל 26 שנות ניסיון מעשי בביצוע, ניהול הקמה וליווי הנדסי לפרויקטים
+            בהיקפים גדולים וקטנים, במגזר הציבורי והפרטי.
+          </p>
+          <ul class="about-list small mb-0">
+            <li>תשתיות מים וביוב.</li>
+            <li>כבישים, פיתוח עירוני ושצ"פים.</li>
+            <li>מבני ציבור ותשתיות נגישות.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- פרויקטים -->
+      <div class="col-md-4 mb-4">
+        <div class="about-highlight-card h-100">
+          <div class="about-highlight-icon">
+            <i class="fa fa-tasks"></i>
+          </div>
+          <h3 class="about-highlight-title">ניהול ופיקוח פרויקטים</h3>
+          <p class="about-highlight-text">
+            ליווי מלא של הפרויקט – החל משלב התכנון, הכנת המפרטים והמסמכים,
+            ועד פיקוח שוטף בשטח, בקרת איכות והעברת הפרויקט ללקוח.
+          </p>
+          <ul class="about-list small mb-0">
+            <li>ניהול לוחות זמנים ותקציב.</li>
+            <li>תיאום בין יועצים, מתכננים וקבלנים.</li>
+            <li>דיווח שוטף ושיתוף פעולה מלא עם הלקוח.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- לקוחות -->
+      <div class="col-md-4 mb-4">
+        <div class="about-highlight-card h-100">
+          <div class="about-highlight-icon">
+            <i class="fa fa-handshake-o"></i>
+          </div>
+          <h3 class="about-highlight-title">לקוחות ושיתופי פעולה</h3>
+          <p class="about-highlight-text">
+            המשרד מלווה רשויות מקומיות, תאגידי מים, חברות ממשלתיות וגופים פרטיים,
+            תוך התאמת השירות לצרכים הייחודיים של כל לקוח.
+          </p>
+          <ul class="about-list small mb-0">
+            <li>תאגידי מים עירוניים.</li>
+            <li>רשויות ומועצות מקומיות.</li>
+            <li>משרדי ממשלה וגופי תשתית.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- חזון וערכים -->
+<section class="about-vision py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="about-vision-card">
+          <h2 class="about-section-title mb-3 text-center">החזון שלנו</h2>
+          <p class="about-vision-text mb-3">
+            אבי אסקפה - אוגדן מהנדסים פועל מתוך מחויבות לשילוב בין מקצועיות הנדסית גבוהה,
+            שירות אישי וצמוד ושמירה על סטנדרטים בלתי מתפשרים של איכות ובטיחות.
+            המטרה שלנו היא להוביל פרויקטים לשטח בצורה יעילה, שקופה ומדויקת –
+            תוך עמידה בלוחות זמנים ויצירת ערך אמיתי ללקוח.
+          </p>
+          <p class="about-vision-text mb-0">
+            אנחנו מאמינים בשיתוף פעולה מלא עם כל הגורמים המעורבים בפרויקט –
+            מהתכנון ועד המסירה – ובבניית מערכות יחסים ארוכות טווח המבוססות
+            על אמינות, שקיפות ותוצאות בשטח.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== סטטיסטיקות – אוגדן מהנדסים ===== -->
+<section class="stats-section py-5" id="company-stats">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-8">
+        <h2 class="section-title mb-3">אבי אסקפה - אוגדן מהנדסים במספרים</h2>
+        <p class="section-subtitle">
+          ניסיון מצטבר בעשרות פרויקטים בתחום התשתיות, המים, הביוב והבנייה הציבורית.
+        </p>
+      </div>
+    </div>
+
+    <div class="row text-center stats-row">
+
+      <!-- פריט 1 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="stat-item">
+          <div class="stat-number-wrapper stat-blue">
+            <span class="stat-plus">+</span>
+            <span class="stat-number" data-target="26">0</span>
+          </div>
+          <p class="stat-label stat-blue">שנות ניסיון</p>
+        </div>
+      </div>
+
+      <!-- פריט 2 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="stat-item">
+          <div class="stat-number-wrapper stat-lightblue">
+            <span class="stat-plus">+</span>
+            <span class="stat-number stat-lightblue" data-target="1700">0</span>
+          </div>
+          <p class="stat-label">פרויקטים בפיקוח וליווי</p>
+        </div>
+      </div>
+
+      <!-- פריט 3 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="stat-item">
+          <div class="stat-number-wrapper stat-orange">
+            <span class="stat-plus">+</span>
+            <span class="stat-number stat-orange" data-target="20">0</span>
+          </div>
+          <p class="stat-label">רשויות ותאגידי מים</p>
+        </div>
+      </div>
+
+      <!-- פריט 4 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="stat-item">
+          <div class="stat-number-wrapper stat-green">
+            <span class="stat-plus">+</span>
+            <span class="stat-number stat-green" data-target="105">0</span>
+          </div>
+          <p class="stat-label">מיליוני ש"ח היקף עבודות</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- קריאה לפעולה -->
+<section class="about-cta py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-7">
+        <h3 class="about-section-title mb-2">רוצים לדבר על הפרויקט הבא שלכם?</h3>
+        <p class="section-subtitle mb-4">
+          נשמח להציע פתרון הנדסי מותאם לצרכים שלכם – משלב הייעוץ הראשוני ועד ליווי מלא בשטח.
+        </p>
+        <a href="{{ url_for('home') }}#contact" class="btn btn-primary btn-lg mb-2">
+         השאירו פרטים ונחזור אליכם
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

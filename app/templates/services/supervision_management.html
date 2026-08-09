@@ -1,0 +1,388 @@
+{% extends "base.html" %}
+
+{% block title %}ניהול ופיקוח עבודות בניה – אוגדן מהנדסים{% endblock %}
+
+{% block extra_head %}
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='services_style/supervision_management.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="gallery-hero py-5">
+    <div class="container text-center">
+
+        <h1 class="section-title mb-3">
+            ניהול ופיקוח עבודות בניה
+        </h1>
+
+        <p class="section-subtitle mb-2">
+            החברה מספקת שירותי ניהול ופיקוח ללקוחות פרטיים הבונים בית פרטי מהיסוד,
+            או העומדים לפני הרחבה ו/או שיפוץ מאסיבי, וכן ליזמים הבונים בניינים
+            ומחפשים שירותי ניהול ופיקוח.
+        </p>
+
+        <p class="section-subtitle small text-muted mb-0">
+            כל התמונות מציגות פרויקטים בתחום ניהול ופיקוח עבודות בניה אשר לוו ונוהלו
+            על ידי אוגדן מהנדסים.
+        </p>
+
+    </div>
+</section>
+
+<section class="gallery-section pb-5">
+<div class="container">
+<div class="gallery-grid">
+
+<!-- תמונה 1 -->
+<a href="{{ url_for('static', filename='img/supervision_management/sup_man1.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="ניהול ופיקוח עבודות בניה"
+   class="gallery-item">
+
+<img src="{{ url_for('static', filename='img/supervision_management/sup_man1.jpg') }}"
+     class="gallery-img"
+     alt="ניהול ופיקוח עבודות בניה"
+     loading="lazy">
+
+</a>
+
+<!-- תמונה 2 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup2.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="פיקוח על עבודות בניה"
+   class="gallery-item">
+
+<img src="{{ url_for('static', filename='img/supervision_management/man_sup2.jpg') }}"
+     class="gallery-img"
+     alt="פיקוח על עבודות בניה"
+     loading="lazy">
+
+</a>
+
+<!-- תמונה 3 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup3.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="ניהול אתר בניה"
+   class="gallery-item">
+
+<img src="{{ url_for('static', filename='img/supervision_management/man_sup3.jpg') }}"
+     class="gallery-img"
+     alt="ניהול אתר בניה"
+     loading="lazy">
+
+</a>
+
+<!-- תמונה 4 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup4.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="פיקוח על פרויקט בניה"
+   class="gallery-item">
+
+<img src="{{ url_for('static', filename='img/supervision_management/man_sup4.jpg') }}"
+     class="gallery-img"
+     alt="פיקוח על פרויקט בניה"
+     loading="lazy">
+
+</a>
+
+<!-- תמונה 5 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup5.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="בקרת איכות באתר"
+   class="gallery-item">
+
+<img src="{{ url_for('static', filename='img/supervision_management/man_sup5.jpg') }}"
+     class="gallery-img"
+     alt="בקרת איכות באתר"
+     loading="lazy">
+
+</a>
+
+<!-- תמונה 6 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup6.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="פיקוח הנדסי"
+   class="gallery-item">
+
+<img src="{{ url_for('static', filename='img/supervision_management/man_sup6.jpg') }}"
+     class="gallery-img"
+     alt="פיקוח הנדסי"
+     loading="lazy">
+
+</a>
+
+<!-- תמונה 7 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup7.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="ניהול ביצוע"
+   class="gallery-item">
+
+<img src="{{ url_for('static', filename='img/supervision_management/man_sup7.jpg') }}"
+     class="gallery-img"
+     alt="ניהול ביצוע"
+     loading="lazy">
+
+</a>
+
+<!-- תמונה 8 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup8.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="בניה ופיקוח"
+   class="gallery-item">
+
+<img src="{{ url_for('static', filename='img/supervision_management/man_sup8.jpg') }}"
+     class="gallery-img"
+     alt="בניה ופיקוח"
+     loading="lazy">
+
+</a>
+
+<!-- תמונה 9 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup9.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="ניהול ופיקוח באתר בניה"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup9.jpg') }}"
+         class="gallery-img"
+         alt="ניהול ופיקוח באתר בניה"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 10 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup10.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="פיקוח הנדסי"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup10.jpg') }}"
+         class="gallery-img"
+         alt="פיקוח הנדסי"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 11 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup11.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="ניהול פרויקט"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup11.jpg') }}"
+         class="gallery-img"
+         alt="ניהול פרויקט"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 12 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup12.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="בקרת איכות"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup12.jpg') }}"
+         class="gallery-img"
+         alt="בקרת איכות"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 13 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup13.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="עבודות שלד"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup13.jpg') }}"
+         class="gallery-img"
+         alt="עבודות שלד"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 14 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup14.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="שלבי ביצוע"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup14.jpg') }}"
+         class="gallery-img"
+         alt="שלבי ביצוע"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 15 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup15.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="פיקוח צמוד"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup15.jpg') }}"
+         class="gallery-img"
+         alt="פיקוח צמוד"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 16 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup16.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="ניהול אתר"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup16.jpg') }}"
+         class="gallery-img"
+         alt="ניהול אתר"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 17 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup17.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="פיקוח על עבודות בניה"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup17.jpg') }}"
+         class="gallery-img"
+         alt="פיקוח על עבודות בניה"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 18 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup18.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="ניהול עבודות בניה"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup18.jpg') }}"
+         class="gallery-img"
+         alt="ניהול עבודות בניה"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 19 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup19.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="פיקוח באתר"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup19.jpg') }}"
+         class="gallery-img"
+         alt="פיקוח באתר"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 20 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup20.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="בקרת איכות באתר בניה"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup20.jpg') }}"
+         class="gallery-img"
+         alt="בקרת איכות באתר בניה"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 21 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup21.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="ניהול פרויקט"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup21.jpg') }}"
+         class="gallery-img"
+         alt="ניהול פרויקט"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 22 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup22.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="פיקוח הנדסי"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup22.jpg') }}"
+         class="gallery-img"
+         alt="פיקוח הנדסי"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 23 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup23.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="עבודות בניה"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup23.jpg') }}"
+         class="gallery-img"
+         alt="עבודות בניה"
+         loading="lazy">
+
+</a>
+
+<!-- תמונה 24 -->
+<a href="{{ url_for('static', filename='img/supervision_management/man_sup24.jpg') }}"
+   data-lightbox="supervision-management-gallery"
+   data-title="פרויקט בניה"
+   class="gallery-item">
+
+    <img src="{{ url_for('static', filename='img/supervision_management/man_sup24.jpg') }}"
+         class="gallery-img"
+         alt="פרויקט בניה"
+         loading="lazy">
+
+</a>
+
+</div>
+</div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (typeof lightbox !== "undefined") {
+
+        lightbox.option({
+            resizeDuration:250,
+            fadeDuration:250,
+            imageFadeDuration:250,
+            wrapAround:true,
+            disableScrolling:true,
+            fitImagesInViewport:true,
+            alwaysShowNavOnTouchDevices:true,
+            albumLabel:"תמונה %1 מתוך %2"
+        });
+
+    } else {
+
+        console.error("Lightbox לא נטען");
+
+    }
+});
+</script>
+
+{% endblock %}

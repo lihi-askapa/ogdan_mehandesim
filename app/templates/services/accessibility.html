@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+
+{% block title %}נגישות – אוגדן מהנדסים{% endblock %}
+
+{% block extra_head %}
+  <!-- Lightbox CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+  >
+
+  <!-- CSS של עמוד הגלריה -->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='services_style/accessibility.css') }}"
+  >
+{% endblock %}
+
+{% block content %}
+
+<section class="gallery-hero py-5">
+  <div class="container text-center">
+    <h1 class="section-title mb-3">נגישות</h1>
+
+    <p class="section-subtitle mb-2">
+      מתן אישורי נגישות לעסקים, ביצוע סקרי נגישות לבניינים קיימים וחדשים,
+      מוסדות ציבור, בתי ספר, גנים, פארקים ועוד.
+    </p>
+
+    <p class="section-subtitle small text-muted mb-0">
+      כל התמונות מציגות פרויקטים בתחום הנגישות אשר לוו ונוהלו על ידי אוגדן מהנדסים.
+    </p>
+  </div>
+</section>
+
+<section class="gallery-section pb-5">
+  <div class="container">
+    <div class="gallery-grid">
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc1.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="ריצוף נגיש ושביל הליכה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc1.jpg') }}"
+          class="gallery-img"
+          alt="ריצוף נגיש ושביל הליכה"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc2.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="מתחם משחקים נגיש לילדים"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc2.jpg') }}"
+          class="gallery-img"
+          alt="מתחם משחקים נגיש לילדים"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc3.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="ריהוט רחוב נגיש ושבילי הליכה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc3.jpg') }}"
+          class="gallery-img"
+          alt="ריהוט רחוב נגיש ושבילי הליכה"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc4.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="תאורת לילה במרחב ציבורי נגיש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc4.jpg') }}"
+          class="gallery-img"
+          alt="תאורת לילה במרחב ציבורי נגיש"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc5.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="שביל הליכה נגיש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc5.jpg') }}"
+          class="gallery-img"
+          alt="שביל הליכה נגיש"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc6.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="מתקני משחק נגישים"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc6.jpg') }}"
+          class="gallery-img"
+          alt="מתקני משחק נגישים"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc7.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="נגישות במרחב ציבורי"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc7.jpg') }}"
+          class="gallery-img"
+          alt="נגישות במרחב ציבורי"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc8.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="תכנון שביל נגיש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc8.jpg') }}"
+          class="gallery-img"
+          alt="תכנון שביל נגיש"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc9.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="מעקה נגיש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc9.jpg') }}"
+          class="gallery-img"
+          alt="מעקה נגיש"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc10.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="רמפה נגישה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc10.jpg') }}"
+          class="gallery-img"
+          alt="רמפה נגישה"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc11.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="כניסה נגישה למבנה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc11.jpg') }}"
+          class="gallery-img"
+          alt="כניסה נגישה למבנה"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc12.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="פתרון נגישות במבנה ציבורי"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc12.jpg') }}"
+          class="gallery-img"
+          alt="פתרון נגישות במבנה ציבורי"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc13.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="הנגשת דרך גישה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc13.jpg') }}"
+          class="gallery-img"
+          alt="הנגשת דרך גישה"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc14.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="רמפה עם מעקה בטיחות"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc14.jpg') }}"
+          class="gallery-img"
+          alt="רמפה עם מעקה בטיחות"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc15.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="התאמת כניסה נגישה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc15.jpg') }}"
+          class="gallery-img"
+          alt="התאמת כניסה נגישה"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc16.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="נגישות במבנה ציבורי"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc16.jpg') }}"
+          class="gallery-img"
+          alt="נגישות במבנה ציבורי"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc17.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="שביל ורמפה נגישים"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc17.jpg') }}"
+          class="gallery-img"
+          alt="שביל ורמפה נגישים"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc18.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="התאמות נגישות בשטח"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc18.jpg') }}"
+          class="gallery-img"
+          alt="התאמות נגישות בשטח"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc19.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="פתרון גישה נגיש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc19.jpg') }}"
+          class="gallery-img"
+          alt="פתרון גישה נגיש"
+          loading="lazy"
+        >
+      </a>
+
+      <a
+        href="{{ url_for('static', filename='img/accessibility_img/acc20.jpg') }}"
+        data-lightbox="accessibility-gallery"
+        data-title="פרויקט נגישות"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/accessibility_img/acc20.jpg') }}"
+          class="gallery-img"
+          alt="פרויקט נגישות"
+          loading="lazy"
+        >
+      </a>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof lightbox !== "undefined") {
+        lightbox.option({
+          resizeDuration: 250,
+          fadeDuration: 250,
+          imageFadeDuration: 250,
+          wrapAround: true,
+          disableScrolling: true,
+          fitImagesInViewport: true,
+          alwaysShowNavOnTouchDevices: true,
+          albumLabel: "תמונה %1 מתוך %2"
+        });
+      } else {
+        console.error("Lightbox לא נטען");
+      }
+    });
+  </script>
+{% endblock %}

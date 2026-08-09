@@ -1,0 +1,427 @@
+{% extends "base.html" %}
+
+{% block title %}עבודות עפר וכבישים – אוגדן מהנדסים{% endblock %}
+
+{% block extra_head %}
+  <!-- Lightbox CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+  >
+
+  <!-- CSS של הגלריה -->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='services_style/accessibility.css') }}"
+  >
+{% endblock %}
+
+{% block content %}
+
+<section class="gallery-hero py-5">
+  <div class="container text-center">
+    <h1 class="section-title mb-3">עבודות עפר וכבישים</h1>
+
+    <p class="section-subtitle mb-2">
+      פיקוח על עבודות עפר, הכנת מבנה כביש, סלילה וריבוד בפרויקטים עירוניים ובין־עירוניים.
+    </p>
+
+    <p class="section-subtitle small text-muted mb-0">
+      כל התמונות מציגות פרויקטים בתחום עבודות העפר והכבישים אשר לוו ונוהלו על ידי אוגדן מהנדסים.
+    </p>
+  </div>
+</section>
+
+<section class="gallery-section pb-5">
+  <div class="container">
+    <div class="gallery-grid">
+
+      <!-- תמונה 1 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth1.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות עפר והכנת תשתית"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth1.jpg') }}"
+          class="gallery-img"
+          alt="עבודות עפר והכנת תשתית"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 2 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth2.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="הכנת מבנה כביש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth2.jpg') }}"
+          class="gallery-img"
+          alt="הכנת מבנה כביש"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 3 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth3.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות תשתית ופיתוח"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth3.jpg') }}"
+          class="gallery-img"
+          alt="עבודות תשתית ופיתוח"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 4 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth4.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="סלילה ופיתוח כביש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth4.jpg') }}"
+          class="gallery-img"
+          alt="סלילה ופיתוח כביש"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 5 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth5.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="פיקוח על עבודות כבישים"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth5.jpg') }}"
+          class="gallery-img"
+          alt="פיקוח על עבודות כבישים"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 6 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth6.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות פיתוח ותשתית"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth6.jpg') }}"
+          class="gallery-img"
+          alt="עבודות פיתוח ותשתית"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 7 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth7.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="הכשרת שטח לעבודות כביש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth7.jpg') }}"
+          class="gallery-img"
+          alt="הכשרת שטח לעבודות כביש"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 8 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth8.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות עפר ותשתיות"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth8.jpg') }}"
+          class="gallery-img"
+          alt="עבודות עפר ותשתיות"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 9 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth9.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="פיתוח דרך עירונית"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth9.jpg') }}"
+          class="gallery-img"
+          alt="פיתוח דרך עירונית"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 10 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth10.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="הכנת תשתית לסלילה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth10.jpg') }}"
+          class="gallery-img"
+          alt="הכנת תשתית לסלילה"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 11 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth11.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות סלילה בשטח"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth11.jpg') }}"
+          class="gallery-img"
+          alt="עבודות סלילה בשטח"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 12 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth12.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="פיתוח תשתיות כביש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth12.jpg') }}"
+          class="gallery-img"
+          alt="פיתוח תשתיות כביש"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 13 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth13.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות עפר בפרויקט תשתיות"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth13.jpg') }}"
+          class="gallery-img"
+          alt="עבודות עפר בפרויקט תשתיות"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 14 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth14.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות כביש ופיתוח סביבתי"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth14.jpg') }}"
+          class="gallery-img"
+          alt="עבודות כביש ופיתוח סביבתי"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 15 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth15.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="ביצוע עבודות סלילה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth15.jpg') }}"
+          class="gallery-img"
+          alt="ביצוע עבודות סלילה"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 16 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth16.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="פיקוח על עבודות פיתוח"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth16.jpg') }}"
+          class="gallery-img"
+          alt="פיקוח על עבודות פיתוח"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 17 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth17.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="הכנת דרך ותשתיות"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth17.jpg') }}"
+          class="gallery-img"
+          alt="הכנת דרך ותשתיות"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 18 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth18.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="פיתוח כבישים ותשתיות"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth18.jpg') }}"
+          class="gallery-img"
+          alt="פיתוח כבישים ותשתיות"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 19 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth19.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות פיתוח עירוני"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth19.jpg') }}"
+          class="gallery-img"
+          alt="עבודות פיתוח עירוני"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 20 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth20.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="סלילת דרך ופיתוח השטח"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth20.jpg') }}"
+          class="gallery-img"
+          alt="סלילת דרך ופיתוח השטח"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 21 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth21.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות עפר וסלילה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth21.jpg') }}"
+          class="gallery-img"
+          alt="עבודות עפר וסלילה"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 22 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth22.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="השלמת עבודות כביש"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth22.jpg') }}"
+          class="gallery-img"
+          alt="השלמת עבודות כביש"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 23 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth23.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="עבודות תשתית וסלילה"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth23.jpg') }}"
+          class="gallery-img"
+          alt="עבודות תשתית וסלילה"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- תמונה 24 -->
+      <a
+        href="{{ url_for('static', filename='img/earth_development/earth24.jpg') }}"
+        data-lightbox="earth-development-gallery"
+        data-title="פרויקט עבודות עפר וכבישים"
+        class="gallery-item"
+      >
+        <img
+          src="{{ url_for('static', filename='img/earth_development/earth24.jpg') }}"
+          class="gallery-img"
+          alt="פרויקט עבודות עפר וכבישים"
+          loading="lazy"
+        >
+      </a>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof lightbox !== "undefined") {
+        lightbox.option({
+          resizeDuration: 250,
+          fadeDuration: 250,
+          imageFadeDuration: 250,
+          wrapAround: true,
+          disableScrolling: true,
+          fitImagesInViewport: true,
+          alwaysShowNavOnTouchDevices: true,
+          albumLabel: "תמונה %1 מתוך %2"
+        });
+      } else {
+        console.error("Lightbox לא נטען");
+      }
+    });
+  </script>
+{% endblock %}

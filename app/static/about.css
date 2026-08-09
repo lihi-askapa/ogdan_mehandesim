@@ -1,0 +1,234 @@
+/* ===== פרופיל חברה – HERO ===== */
+
+.about-hero {
+  background: linear-gradient(135deg, #f5fafc 0%, #eef3ff 40%, #f7f8fb 100%);
+  border-bottom: 1px solid #e1e4f0;
+}
+
+.about-kicker {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: #0f6ea5;
+}
+
+.about-contact-card {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.4rem 1.3rem;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+  font-size: 0.9rem;
+}
+
+.about-contact-card i {
+  margin-left: 0.4rem;
+  color: #0f6ea5;
+}
+
+.about-contact-card a {
+  color: #0f6ea5;
+  text-decoration: none;
+}
+
+.about-contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== מייסד החברה ===== */
+
+.about-founder-photo-wrapper {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.about-founder-photo {
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.about-founder-lead {
+  font-size: 0.98rem;
+  color: #444;
+}
+
+.about-mini-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #0f2f3f;
+}
+
+.about-list {
+  padding-right: 1.1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.about-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* ===== בלוקי מידע עסקיים ===== */
+
+.about-highlights {
+  background-color: #f7f8fb;
+}
+
+.about-highlight-card {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.6rem 1.5rem;
+  box-shadow: 0 12px 32px rgba(15, 47, 63, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.about-highlight-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7f3fb;
+  color: #0f6ea5;
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.about-highlight-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.about-highlight-text {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ===== חזון ===== */
+
+.about-vision-card {
+  background-color: #ffffff;
+  border-radius: 1.4rem;
+  padding: 2rem 1.8rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.about-vision-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ===== סטטיסטיקות – אוגדן מהנדסים ===== */
+
+.stats-row {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background-color: #ffffff;
+  border-radius: 1.3rem;
+  padding: 1.4rem 1rem 1.3rem;
+  box-shadow: 0 12px 32px rgba(15, 110, 165, 0.10);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15, 110, 165, 0.16);
+}
+
+.stat-number-wrapper {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.stat-number {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #0f6ea5;
+}
+
+.stat-label {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* צבעי מספרים */
+.stat-number.stat-blue {
+  color: #0f6ea5; /* כחול עמוק – צבע האתר */
+}
+
+.stat-number.stat-lightblue {
+  color: #54b4eb; /* תכלת בהיר */
+}
+
+.stat-number.stat-orange {
+  color: #f5a623; /* כתום זהב */
+}
+
+.stat-number.stat-green {
+  color: #2cc7a5; /* ירוק טורקיז עדין */
+}
+
+/* סימן + */
+.stat-plus {
+  color: inherit; /* ייקח את צבע המספר */
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+
+/* מובייל */
+@media (max-width: 575.98px) {
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  .stat-item {
+    padding-inline: 0.75rem;
+  }
+}
+
+
+/* ===== CTA תחתון ===== */
+
+.about-cta .btn-primary {
+  border-radius: 999px;
+  padding-inline: 2.4rem;
+}
+
+/* ===== רספונסיביות ===== */
+
+@media (max-width: 991.98px) {
+  .about-hero {
+    text-align: center;
+  }
+
+  .about-contact-card {
+    margin-top: 1.5rem;
+  }
+
+  .about-founder-photo-wrapper {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-vision-card {
+    padding: 1.6rem 1.3rem;
+  }
+}
