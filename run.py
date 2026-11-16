@@ -33,6 +33,27 @@ app = Flask(
     static_folder="app/static"
 )
 
+# =========================================================
+# מטמון (cache) לקבצים סטטיים
+# תמונות וסרטונים נשמרים בדפדפן לשבוע, כך שבכניסה חוזרת
+# הם לא יורדים שוב. CSS/JS נבדקים בכל טעינה כדי ששינויים יופיעו מיד.
+# =========================================================
+
+MEDIA_CACHE_SECONDS = 7 * 24 * 60 * 60
+MEDIA_EXTENSIONS = (
+    ".jpg", ".jpeg", ".png", ".webp", ".svg", ".gif", ".mp4", ".webm"
+)
+
+
+def _static_max_age(filename):
+    if filename and filename.lower().endswith(MEDIA_EXTENSIONS):
+        return MEDIA_CACHE_SECONDS
+    return None
+
+
+app.get_send_file_max_age = _static_max_age
+
+
 # נדרש עבור הודעות flash
 app.config["SECRET_KEY"] = os.getenv(
     "SECRET_KEY",
@@ -118,6 +139,12 @@ validate_mail_configuration()
 @app.route("/")
 def home():
     return render_template("index.html")
+
+
+@app.route("/healthz")
+def healthz():
+    # בדיקת זמינות קלה - לשימוש שירות "ping" שמונע מהשרת להירדם
+    return "ok", 200, {"Cache-Control": "no-store"}
 
 
 @app.route("/about")

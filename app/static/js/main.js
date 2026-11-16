@@ -95,3 +95,77 @@ document.addEventListener('DOMContentLoaded', function () {
       filterServices(input.value);
     });
 });
+
+
+// ===== סרטוני פרויקטים: נטענים ומתנגנים רק כשהם על המסך =====
+// (preload="none" ב-HTML, כך שהדף הראשי לא מוריד את כל הסרטונים מראש)
+
+document.addEventListener("DOMContentLoaded", function () {
+  const videos = document.querySelectorAll("video.project-video");
+  if (!videos.length) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion || !("IntersectionObserver" in window)) return;  // נשאר תמונת poster
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        const playPromise = video.play();
+        if (playPromise) playPromise.catch(function () {});
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.25 });
+
+  videos.forEach(function (video) { observer.observe(video); });
+});
+
+
+// ===== תפריט עליון: שקוף מעל הסרטון, לבן אחרי גלילה =====
+
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".site-header");
+  if (!header || !document.body.classList.contains("has-hero")) return;
+
+  function update() {
+    header.classList.toggle("is-scrolled", window.scrollY > 40);
+  }
+
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+
+  // כשהתפריט נפתח במובייל - רקע לבן כדי שהקישורים יהיו קריאים
+  if (window.jQuery) {
+    jQuery("#mainNav")
+      .on("show.bs.collapse", function () { header.classList.add("menu-open"); })
+      .on("hidden.bs.collapse", function () { header.classList.remove("menu-open"); });
+  }
+});
+
+
+// ===== הופעה עדינה של אזורים בזמן גלילה =====
+
+document.addEventListener("DOMContentLoaded", function () {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion || !("IntersectionObserver" in window)) return;
+
+  const items = document.querySelectorAll(
+    ".service-card, .project-card, .process-step, .stat-item, .cta-inner"
+  );
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+
+  items.forEach(function (el) {
+    el.classList.add("reveal");
+    observer.observe(el);
+  });
+});

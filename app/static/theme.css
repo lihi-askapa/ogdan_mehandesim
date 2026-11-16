@@ -1,0 +1,963 @@
+/* =========================================================
+   THEME – עיצוב מעודכן לאתר
+   נטען אחרי style.css ודורס אותו. כדי לחזור לעיצוב הקודם
+   מספיק להסיר את הקישור לקובץ הזה ב-base.html.
+========================================================= */
+
+:root {
+  --navy: #0b2540;
+  --navy-2: #12355a;
+  --navy-deep: #071a2e;
+  --blue: #0f6ea5;
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --ink: #1f2937;
+  --muted: #5b6472;
+  --line: #e3e8ef;
+  --bg: #f5f7fa;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(11, 37, 64, 0.08);
+  --shadow-hover: 0 18px 40px rgba(11, 37, 64, 0.14);
+}
+
+body {
+  color: var(--ink);
+  background-color: var(--bg);
+}
+
+
+/* =========================================================
+   1 + 10. טיפוגרפיה, כפתורים ומרווחים
+========================================================= */
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 0.7rem;
+  margin-inline-start: 0;
+  border-radius: 3px;
+  background-color: var(--accent);
+}
+
+.section-title.text-center::after,
+.text-center .section-title::after {
+  margin-inline: auto;
+}
+
+.section-subtitle {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.site-main > section.py-5 {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  border-color: var(--navy);
+  background-color: var(--navy);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  border-color: var(--navy-2) !important;
+  background-color: var(--navy-2) !important;
+}
+
+.btn-accent {
+  border: 1px solid var(--accent);
+  color: var(--navy);
+  background-color: var(--accent);
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  border-color: var(--accent-dark);
+  color: var(--navy);
+  background-color: var(--accent-dark);
+}
+
+a {
+  color: var(--blue);
+}
+
+/* hero: כפתור ראשי בצבע ההדגשה */
+.hero-actions .btn-primary {
+  border-color: var(--accent);
+  color: var(--navy);
+  box-shadow: 0 8px 24px rgba(7, 26, 46, 0.35);
+  background-color: var(--accent);
+}
+
+.hero-actions .btn-primary:hover,
+.hero-actions .btn-primary:focus {
+  border-color: var(--accent-dark) !important;
+  color: var(--navy);
+  background-color: var(--accent-dark) !important;
+}
+
+.hero-search-button {
+  background-color: var(--navy);
+}
+
+.hero-search-button:hover {
+  background-color: var(--navy-2);
+}
+
+
+/* =========================================================
+   2. תפריט עליון
+========================================================= */
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: var(--blue);
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after,
+.navbar-light .navbar-nav .nav-link:focus::after {
+  background-color: var(--accent);
+}
+
+.nav-phone {
+  font-weight: 600 !important;
+  color: var(--navy) !important;
+}
+
+.nav-cta {
+  margin-inline-start: 0.6rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+/* בדף הבית: התפריט שקוף מעל הסרטון */
+.has-hero .site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+.has-hero .site-header .navbar {
+  background-color: transparent !important;
+  box-shadow: none;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.has-hero .site-header.is-scrolled .navbar,
+.has-hero .site-header.menu-open .navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(11, 37, 64, 0.1);
+}
+
+/* הלוגו המקורי נשאר כמו שהוא - על רקע לבן מעוגל */
+.has-hero .site-header .logo-img {
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.has-hero .site-header:not(.is-scrolled):not(.menu-open) .brand-main,
+.has-hero .site-header:not(.is-scrolled):not(.menu-open) .brand-sub,
+.has-hero .site-header:not(.is-scrolled):not(.menu-open) .nav-link,
+.has-hero .site-header:not(.is-scrolled):not(.menu-open) .nav-phone {
+  color: #ffffff !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.has-hero .site-header:not(.is-scrolled):not(.menu-open) .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.has-hero .site-header:not(.is-scrolled):not(.menu-open) .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* הסרטון תופס כ-70% מגובה המסך (התפריט יושב מעליו),
+   כך שכבר במסך הראשון רואים גם את פס הנתונים */
+.has-hero .hero-full-video {
+  height: 70vh;
+  height: 70svh;
+  max-height: 720px;
+  min-height: 500px;
+  border-radius: 0;
+}
+
+.has-hero .hero-content {
+  padding-top: 90px;
+}
+
+.has-hero .hero-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 46, 0.6) 0%,
+      rgba(7, 26, 46, 0) 26%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.05) 15%,
+      rgba(0, 0, 0, 0.2) 55%,
+      rgba(0, 0, 0, 0.42) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(7, 26, 46, 0.45) 100%
+    );
+}
+
+
+/* =========================================================
+   4. פס נתונים מתחת לסרטון
+========================================================= */
+
+.stats-bar {
+  padding: 2.4rem 0;
+  background-color: var(--navy);
+}
+
+.stats-bar .stats-heading {
+  display: none;
+}
+
+.stats-bar .stats-row {
+  max-width: 1100px;
+}
+
+.stats-bar .stats-row > div {
+  margin-bottom: 0 !important;
+}
+
+.stats-bar .stat-item {
+  padding: 0.4rem 1rem;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.stats-bar .stats-row > div + div .stat-item {
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.stats-bar .stat-item:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.stats-bar .stat-number,
+.stats-bar .stat-number-wrapper {
+  font-size: 2.4rem;
+  color: #ffffff !important;
+}
+
+.stats-bar .stat-plus {
+  color: var(--accent) !important;
+}
+
+.stats-bar .stat-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   מי אנחנו
+========================================================= */
+
+#about-short {
+  background-color: #ffffff;
+}
+
+.about-avatar {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   5. כרטיסי שירותים עם תמונה
+========================================================= */
+
+#services {
+  background-color: var(--bg);
+}
+
+.service-card {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-media {
+  height: 190px;
+  overflow: hidden;
+  background-color: var(--navy);
+}
+
+.service-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-media img {
+  transform: scale(1.06);
+}
+
+.service-body {
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.service-icon {
+  position: relative;
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  margin-top: -27px;
+  margin-bottom: 0.9rem;
+  border: 3px solid #ffffff;
+  font-size: 1.3rem;
+  color: #ffffff;
+  background-color: var(--navy);
+  box-shadow: 0 6px 16px rgba(11, 37, 64, 0.25);
+}
+
+.service-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.service-text {
+  color: var(--muted);
+}
+
+.service-link {
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.service-link::before {
+  content: "←";
+  float: left;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover .service-link::before {
+  transform: translateX(-4px);
+}
+
+.service-link:hover {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   7. איך אנחנו עובדים
+========================================================= */
+
+.process-section {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+.process-steps {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  list-style: none;
+}
+
+/* קו שמחבר בין השלבים */
+.process-steps::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  right: 12.5%;
+  left: 12.5%;
+  height: 2px;
+  background-image: linear-gradient(to left, var(--line) 50%, transparent 50%);
+  background-size: 14px 2px;
+}
+
+.process-step {
+  position: relative;
+  text-align: center;
+}
+
+.process-num {
+  position: relative;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--navy);
+  box-shadow: 0 0 0 2px var(--line);
+}
+
+.process-step:hover .process-num {
+  color: var(--navy);
+  background-color: var(--accent);
+}
+
+.process-title,
+.process-text {
+  text-align: center;
+}
+
+.process-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.process-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* =========================================================
+   6. כרטיסי פרויקטים עם נתונים
+========================================================= */
+
+.project-card {
+  height: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-video,
+.project-img {
+  height: 230px;
+}
+
+.project-body {
+  padding: 1.2rem 1.4rem 1.4rem;
+}
+
+.project-tag {
+  margin-bottom: 0.6rem;
+  padding: 0.2rem 0.75rem;
+  display: inline-block;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy);
+  background-color: #fdf0d5;
+}
+
+.project-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.project-facts {
+  margin: 0;
+  padding: 0.75rem 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.project-facts li {
+  padding: 0.15rem 0;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.project-facts li span {
+  min-width: 3.5rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   8. לוגואים של לקוחות - בצבע מלא, גודל אחיד
+========================================================= */
+
+#clients {
+  background-color: #ffffff;
+}
+
+.logos-track {
+  gap: 4.5rem;
+  animation-duration: 40s;
+}
+
+.logos-slider:hover .logos-track {
+  animation-play-state: paused;
+}
+
+/* הלוגואים בצבעים המקוריים, בגודל אחיד */
+.logos-track img {
+  height: 70px;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.logos-track img:hover {
+  transform: scale(1.08);
+}
+
+.logos-slider::before,
+.logos-slider::after {
+  width: 160px;
+}
+
+.logos-slider::before {
+  background: linear-gradient(to right, transparent, #ffffff);
+}
+
+.logos-slider::after {
+  background: linear-gradient(to left, transparent, #ffffff);
+}
+
+
+/* =========================================================
+   9. פס "יש לכם פרויקט חדש?"
+========================================================= */
+
+/* כרטיס בהיר בתוך הדף (ולא פס כהה לכל הרוחב) - כדי שלא ייראה כמו סוף הדף */
+.cta-band {
+  padding: 3.5rem 0 0;
+  background-color: var(--bg);
+}
+
+.cta-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.75rem 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  border: 1px solid var(--line);
+  border-right: 5px solid var(--accent);
+  border-radius: var(--radius);
+  background-color: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.cta-title {
+  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.cta-text {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cta-actions .btn i {
+  margin-left: 0.35rem;
+}
+
+.cta-band .btn-outline-light {
+  border-color: var(--navy);
+  color: var(--navy);
+  background-color: transparent;
+}
+
+.cta-band .btn-outline-light:hover,
+.cta-band .btn-outline-light:focus {
+  color: #ffffff;
+  background-color: var(--navy);
+}
+
+/* הטופס ממשיך ישירות מתחת לכרטיס */
+.site-main > .cta-band + #contact.py-5 {
+  padding-top: 2.5rem !important;
+}
+
+#contact {
+  background-color: var(--bg) !important;
+}
+
+.contact-card-wrapper {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.contact-quick-info i {
+  color: var(--accent-dark);
+}
+
+.contact-quick-info a {
+  color: var(--blue);
+}
+
+.contact-form button.btn-primary {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-color: var(--navy);
+  border-radius: 10px;
+  background-color: var(--navy);
+}
+
+.contact-form button.btn-primary:hover,
+.contact-form button.btn-primary:focus {
+  border-color: var(--navy-2);
+  background-color: var(--navy-2);
+}
+
+.contact-form .form-control {
+  border-color: var(--line);
+  border-radius: 10px;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(15, 110, 165, 0.15);
+}
+
+
+/* =========================================================
+   9. פוטר מורחב
+========================================================= */
+
+.site-footer {
+  padding: 3.5rem 0 1.5rem;
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.72);
+  background-color: var(--navy-deep);
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+  gap: 2.5rem;
+}
+
+.footer-heading {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-heading::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-top: 0.5rem;
+  background-color: var(--accent);
+}
+
+.footer-about p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links i {
+  width: 1.1rem;
+  margin-left: 0.4rem;
+  color: var(--accent);
+}
+
+.footer-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+}
+
+.footer-bottom .footer-copy {
+  text-align: right;
+}
+
+
+/* =========================================================
+   10. כותרות הדפים הפנימיים - אותה שפה עיצובית
+========================================================= */
+
+.site-main .gallery-hero,
+.site-main .about-hero,
+.site-main .jobs-hero {
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(245, 158, 11, 0.14), transparent 40%),
+    linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+}
+
+.site-main .gallery-hero {
+  margin-bottom: 3rem;
+}
+
+/* כותרת הגלריה ממורכזת יחד עם הקו שמתחתיה */
+.site-main .gallery-hero .container > * {
+  text-align: center;
+}
+
+.site-main .gallery-hero .section-title,
+.site-main .about-hero .section-title,
+.site-main .jobs-hero .jobs-title {
+  color: #ffffff;
+}
+
+.site-main .gallery-hero .section-subtitle,
+.site-main .about-hero .section-subtitle,
+.site-main .jobs-hero .jobs-subtitle,
+.site-main .jobs-hero p,
+.site-main .gallery-hero .text-muted,
+.site-main .about-hero .text-muted {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.site-main .about-hero .about-kicker {
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   10. הופעה עדינה בגלילה
+========================================================= */
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  animation: reveal-up 0.6s ease backwards;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   רספונסיביות
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.5rem;
+  }
+
+  .process-steps::before {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* תפריט פתוח במובייל */
+  .nav-cta-item {
+    padding: 0.5rem 0;
+  }
+
+  .nav-cta {
+    width: 100%;
+    margin: 0;
+  }
+
+  .stats-bar .stats-row > div:nth-child(odd) .stat-item {
+    border-right: 0;
+  }
+
+  .stats-bar .stats-row > div:nth-child(-n+2) {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .site-main > section.py-5,
+  .process-section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .has-hero .hero-full-video {
+    height: 72svh;
+    min-height: 540px;
+    border-radius: 0;
+  }
+
+  .stats-bar .stat-number,
+  .stats-bar .stat-number-wrapper {
+    font-size: 1.9rem;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-inner,
+  .cta-title,
+  .cta-text {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .cta-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logos-track {
+    animation: none;
+  }
+}
+
+
+/* =========================================================
+   תיקוני קריאוּת (טקסט בהיר על רקע בהיר)
+========================================================= */
+
+/* כרטיס פרטי קשר בעמוד "פרופיל החברה" - טקסט כהה על הכרטיס הלבן */
+.site-main .about-hero .about-contact-card {
+  color: var(--ink);
+}
+
+.site-main .about-hero .about-contact-card h5 {
+  color: var(--navy);
+}
+
+.site-main .about-hero .about-contact-card .text-muted {
+  color: var(--muted) !important;
+}
+
+/* מספרים בעמוד "פרופיל החברה" - צבעים כהים מספיק לרקע לבן */
+.site-main .stat-number.stat-lightblue,
+.site-main .stat-number-wrapper.stat-lightblue {
+  color: var(--blue);
+}
+
+.site-main .stat-number.stat-orange,
+.site-main .stat-number-wrapper.stat-orange {
+  color: var(--accent-dark);
+}
+
+.site-main .stat-number.stat-green,
+.site-main .stat-number-wrapper.stat-green {
+  color: #0f8a6f;
+}
