@@ -36,6 +36,16 @@
 
   <div class="hero-overlay"></div>
 
+  <!-- השהיה / הפעלה של הסרטון -->
+  <button
+    type="button"
+    class="hero-video-toggle"
+    aria-label="השהיית הסרטון"
+    aria-pressed="false"
+  >
+    <i class="fa fa-pause" aria-hidden="true"></i>
+  </button>
+
   <div class="hero-content container">
     <div class="hero-text-box">
 
@@ -49,7 +59,7 @@
 
       <div class="hero-actions mb-3">
         <a href="#contact" class="btn btn-primary btn-lg mb-2">
-          צור קשר
+          צרו קשר
         </a>
 
         <a
@@ -119,17 +129,12 @@
       <div class="col-6 col-md-3 mb-4">
         <div class="stat-item">
 
-          <div class="stat-number-wrapper stat-blue">
-            <span class="stat-plus">+</span>
-            <span
-              class="stat-number stat-blue"
-              data-target="26"
-            >
-              0
-            </span>
+          <div class="stat-readout">
+            <span class="stat-number stat-blue" data-target="26">0</span>
+            <span class="stat-unit">שנים</span>
           </div>
 
-          <p class="stat-label">שנות ניסיון</p>
+          <p class="stat-label">ניסיון מצטבר</p>
 
         </div>
       </div>
@@ -138,17 +143,12 @@
       <div class="col-6 col-md-3 mb-4">
         <div class="stat-item">
 
-          <div class="stat-number-wrapper stat-lightblue">
-            <span class="stat-plus">+</span>
-            <span
-              class="stat-number stat-lightblue"
-              data-target="1700"
-            >
-              0
-            </span>
+          <div class="stat-readout">
+            <span class="stat-number stat-lightblue" data-target="1700">0</span>
+            <span class="stat-unit">פרויקטים</span>
           </div>
 
-          <p class="stat-label">פרויקטים בפיקוח וליווי</p>
+          <p class="stat-label">בפיקוח וליווי</p>
 
         </div>
       </div>
@@ -157,14 +157,9 @@
       <div class="col-6 col-md-3 mb-4">
         <div class="stat-item">
 
-          <div class="stat-number-wrapper stat-orange">
-            <span class="stat-plus">+</span>
-            <span
-              class="stat-number stat-orange"
-              data-target="20"
-            >
-              0
-            </span>
+          <div class="stat-readout">
+            <span class="stat-number stat-orange" data-target="20">0</span>
+            <span class="stat-unit">לקוחות</span>
           </div>
 
           <p class="stat-label">רשויות ותאגידי מים</p>
@@ -176,17 +171,12 @@
       <div class="col-6 col-md-3 mb-4">
         <div class="stat-item">
 
-          <div class="stat-number-wrapper stat-green">
-            <span class="stat-plus">+</span>
-            <span
-              class="stat-number stat-green"
-              data-target="105"
-            >
-              0
-            </span>
+          <div class="stat-readout">
+            <span class="stat-number stat-green" data-target="105">0</span>
+            <span class="stat-unit">מיליון ₪</span>
           </div>
 
-          <p class="stat-label">מיליוני ש"ח היקף עבודות</p>
+          <p class="stat-label">היקף עבודות</p>
 
         </div>
       </div>
@@ -206,6 +196,14 @@
           class="about-avatar img-fluid rounded-lg"
           alt="אבי אסקפה"
         >
+
+        <!-- הסמכות (מתוך עמוד "פרופיל החברה") -->
+        <ul class="credentials-strip" aria-label="הסמכות">
+          <li>הנדסאי אזרחי רשום</li>
+          <li>יועץ נגישות מתו״ס ושירות</li>
+          <li>מנהל עבודה מוסמך</li>
+          <li>בודק מז״חים מוסמך</li>
+        </ul>
       </div>
 
       <div class="col-md-8">
@@ -359,7 +357,7 @@
         <div class="service-card h-100">
 
           <div class="service-media">
-            <img loading="lazy" decoding="async" src="{{ url_for('static', filename='img/gardening/gard1.jpg') }}" alt="">
+            <img loading="lazy" decoding="async" src="{{ url_for('static', filename='img/gardening/gard9.jpg') }}" alt="">
           </div>
 
           <div class="service-body">
@@ -1044,7 +1042,7 @@
   </div>
 </section>
 
-<!-- ===== צור קשר ===== -->
+<!-- ===== צרו קשר ===== -->
 <section id="contact" class="py-5 bg-light">
   <div class="container">
 
@@ -1082,7 +1080,7 @@
       {% endwith %}
 
       <h3 class="section-title text-center mb-2">
-        צור קשר
+        צרו קשר
       </h3>
 
       <p class="section-subtitle text-center mb-4">
@@ -1140,6 +1138,7 @@
                   class="form-control"
                   id="name"
                   name="name"
+                  placeholder="שם פרטי ומשפחה"
                   autocomplete="name"
                   required
                 >
@@ -1155,6 +1154,9 @@
                   class="form-control"
                   id="phone"
                   name="phone"
+                  inputmode="tel"
+                  placeholder="050-0000000"
+                  data-validate="phone"
                   autocomplete="tel"
                   required
                 >
@@ -1172,6 +1174,8 @@
                 class="form-control"
                 id="email"
                 name="email"
+                placeholder="name@example.com"
+                data-validate="email"
                 autocomplete="email"
                 required
               >
@@ -1188,6 +1192,10 @@
                 class="form-control"
                 required
               >
+                <option value="" disabled selected>
+                  בחרו תחום
+                </option>
+
                 <option value="נגישות">
                   נגישות
                 </option>
@@ -1230,6 +1238,7 @@
               <textarea
                 id="message"
                 name="message"
+                placeholder="ספרו בקצרה על הפרויקט"
                 rows="4"
                 class="form-control"
                 required

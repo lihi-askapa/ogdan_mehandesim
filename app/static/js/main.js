@@ -12,6 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const numbers = statsSection.querySelectorAll(".stat-number");
   let animated = false;
 
+  // "הפחת תנועה": מציגים את המספרים הסופיים מיד, בלי ספירה
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    numbers.forEach(function (el) {
+      const target = parseInt(el.getAttribute("data-target"), 10);
+      if (!isNaN(target)) el.textContent = target.toLocaleString("he-IL");
+    });
+    return;
+  }
+
   function animateNumber(el) {
     const target = parseInt(el.getAttribute("data-target"), 10);
     if (isNaN(target)) return;
@@ -167,5 +176,88 @@ document.addEventListener("DOMContentLoaded", function () {
   items.forEach(function (el) {
     el.classList.add("reveal");
     observer.observe(el);
+  });
+});
+
+
+
+// ===== הסרטון הראשי: כפתור השהיה + כיבוד "הפחת תנועה" =====
+
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.querySelector(".hero-bg-video");
+  const toggle = document.querySelector(".hero-video-toggle");
+  if (!video || !toggle) return;
+
+  const icon = toggle.querySelector("i");
+
+  function setState(playing) {
+    toggle.setAttribute("aria-pressed", playing ? "false" : "true");
+    toggle.setAttribute("aria-label", playing ? "השהיית הסרטון" : "הפעלת הסרטון");
+    icon.className = playing ? "fa fa-pause" : "fa fa-play";
+  }
+
+  // מי שביקש "הפחת תנועה" רואה תמונה סטטית, ויכול להפעיל את הסרטון בעצמו
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    video.removeAttribute("autoplay");
+    video.pause();
+    setState(false);
+  }
+
+  toggle.addEventListener("click", function () {
+    if (video.paused) {
+      const p = video.play();
+      if (p) p.catch(function () {});
+      setState(true);
+    } else {
+      video.pause();
+      setState(false);
+    }
+  });
+});
+
+
+// ===== בדיקת שדות בזמן מילוי (טלפון ומייל) =====
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fields = document.querySelectorAll("[data-validate]");
+
+  const messages = {
+    phone: "הזינו מספר טלפון ישראלי עם 9 או 10 ספרות, למשל \u2066050\u20110000000\u2069",
+    email: "הזינו כתובת מייל מלאה, למשל \u2066name@example.com\u2069"
+  };
+
+  function isValid(field) {
+    const value = field.value.trim();
+    if (!value) return true;  // שדה ריק מטופל על ידי required
+    if (field.dataset.validate === "phone") {
+      const digits = value.replace(/\D/g, "");
+      return /^0\d{8,9}$/.test(digits);
+    }
+    if (field.dataset.validate === "email") {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+    }
+    return true;
+  }
+
+  fields.forEach(function (field) {
+    const hint = document.createElement("small");
+    hint.className = "field-error";
+    hint.id = field.id + "-error";
+    hint.setAttribute("aria-live", "polite");
+    field.insertAdjacentElement("afterend", hint);
+    field.setAttribute("aria-describedby", hint.id);
+
+    function check() {
+      const ok = isValid(field);
+      const msg = ok ? "" : messages[field.dataset.validate];
+      field.setCustomValidity(msg);
+      field.classList.toggle("is-invalid", !ok);
+      hint.textContent = msg;
+    }
+
+    field.addEventListener("blur", check);
+    field.addEventListener("input", function () {
+      if (field.classList.contains("is-invalid")) check();
+    });
   });
 });

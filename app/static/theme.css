@@ -1339,3 +1339,470 @@ a {
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(-5px); }
 }
+
+
+/* =========================================================
+   תיקוני נגישות לפי ביקורת Apple HIG
+========================================================= */
+
+/* 1. אזור הסרטון גדל עם הטקסט (הגדלת טקסט עד 200%) במקום לחתוך אותו */
+.has-hero .hero-full-video {
+  display: flex;
+  align-items: center;
+  height: auto;
+  min-height: min(70vh, 720px);
+  min-height: min(70svh, 720px);
+}
+
+.has-hero .hero-content {
+  height: auto;
+  flex: 1;
+  padding-bottom: 1.5rem;
+}
+
+.hero-text-box > * {
+  max-width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .has-hero .hero-full-video {
+    height: auto;
+    min-height: max(540px, 72svh);
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* 2. כפתור השהיית הסרטון (44x44) */
+.hero-video-toggle {
+  position: absolute;
+  z-index: 4;
+  right: 1rem;
+  bottom: 1rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background-color: rgba(7, 26, 46, 0.55);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hero-video-toggle:hover {
+  background-color: rgba(7, 26, 46, 0.8);
+}
+
+.hero-video-toggle:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* 2. "הפחת תנועה": בלי אנימציות דקורטיביות */
+@media (prefers-reduced-motion: reduce) {
+  .swipe-hint i {
+    animation: none;
+  }
+
+  .service-media img,
+  .service-card,
+  .project-card {
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* 3. ניגודיות */
+.btn-link,
+.btn-link:hover {
+  color: var(--blue);           /* #0f6ea5 על #f8f9fa = 5.3:1 */
+}
+
+.site-main .job-location,
+.site-main .job-note {
+  color: var(--muted);          /* #5b6472 על לבן = 6.0:1 */
+}
+
+.site-main .stat-number.stat-orange,
+.site-main .stat-number-wrapper.stat-orange {
+  color: #b45309;               /* 5.0:1 על לבן */
+}
+
+.site-main .stat-number.stat-green,
+.site-main .stat-number-wrapper.stat-green {
+  color: #0b7a61;               /* 5.3:1 על לבן */
+}
+
+/* 4. אזורי לחיצה של 44px במסכי מגע */
+@media (pointer: coarse), (max-width: 991.98px) {
+  .footer-links li {
+    margin-bottom: 0;
+  }
+
+  .footer-links a,
+  .created-by-link,
+  .contact-quick-info a,
+  .about-contact-card a,
+  .site-main .jobs-apply-section a[href^="mailto"] {
+    min-height: 44px;
+    padding: 0.35rem 0;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .navbar-toggler {
+    min-width: 48px;
+    min-height: 44px;
+  }
+
+  .hero-actions .btn {
+    min-height: 44px;
+  }
+}
+
+/* מיקוד מקלדת גלוי לכל הקישורים והכפתורים */
+a:focus-visible,
+.btn:focus-visible,
+.service-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* הודעת שגיאה מתחת לשדה */
+.field-error {
+  margin-top: 0.3rem;
+  display: block;
+  min-height: 0;
+  font-size: 0.85rem;
+  color: #b42318;                /* 6.2:1 על לבן */
+}
+
+.field-error:empty {
+  display: none;
+}
+
+.contact-form .form-control.is-invalid,
+.form-control.is-invalid {
+  border-color: #b42318;
+}
+
+/* הלוגו לבד בתפריט, בלי הטקסט הכפול לידו */
+.navbar-brand {
+  gap: 0;
+}
+
+@media (pointer: coarse), (max-width: 991.98px) {
+  .job-apply-btn {
+    min-height: 44px;
+  }
+}
+
+/* הסרה של תקרת הגובה הישנה, כדי שאזור הסרטון יגדל עם הטקסט */
+.has-hero .hero-full-video {
+  max-height: none;
+}
+
+@media (pointer: coarse), (max-width: 991.98px) {
+  .btn-link,
+  .cta-actions .btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* כפתורי הכרטיס יורדים שורה כשהטקסט מוגדל, במקום לחרוג מהמסך */
+@media (max-width: 575.98px) {
+  .cta-actions {
+    flex-wrap: wrap;
+  }
+
+  .cta-actions .btn {
+    flex: 1 1 140px;
+  }
+}
+
+
+/* =========================================================
+   שיפורי עיצוב בשפה הנדסית (מצב שיפור עיצוב של הסקיל)
+========================================================= */
+
+:root {
+  --font-display: "IBM Plex Sans Hebrew", "Heebo", system-ui, sans-serif;
+  --dim-line: #8792a2;                 /* צבע קווי המידה על רקע בהיר */
+  --grid-minor: rgba(255, 255, 255, 0.022);
+  --grid-major: rgba(255, 255, 255, 0.045);
+}
+
+/* ④ גופן הנדסי לכותרות ולמספרים */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.hero-title,
+.hero-subtitle,
+.about-section-title,
+.jobs-title,
+.cta-title,
+.footer-heading,
+.service-title,
+.project-title,
+.process-title,
+.process-num,
+.stat-number,
+.stat-unit {
+  font-family: var(--font-display);
+}
+
+/* ② קו מידה (|——|) במקום הפס הכתום מתחת לכותרות */
+.section-title::after {
+  width: 72px;
+  height: 9px;
+  margin-top: 0.75rem;
+  border-right: 1.5px solid var(--dim-line);
+  border-left: 1.5px solid var(--dim-line);
+  border-radius: 0;
+  background: linear-gradient(var(--dim-line), var(--dim-line)) center / 100% 1.5px no-repeat;
+}
+
+.site-main .gallery-hero .section-title::after,
+.site-main .about-hero .section-title::after {
+  --dim-line: rgba(255, 255, 255, 0.6);
+}
+
+.footer-heading::after {
+  width: 40px;
+  height: 7px;
+  margin-top: 0.55rem;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.45);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.45);
+  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) center / 100% 1.5px no-repeat;
+}
+
+/* ③ נייר שרטוט: רשת מילימטרית עדינה על המשטחים הכהים */
+.stats-bar,
+.site-footer,
+.site-main .gallery-hero,
+.site-main .about-hero,
+.site-main .jobs-hero {
+  background-image:
+    linear-gradient(var(--grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+    linear-gradient(var(--grid-minor) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px),
+    linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px, 100% 100%;
+}
+
+.stats-bar {
+  background-color: var(--navy);
+}
+
+/* ⑤ פס הנתונים כקריאת מדידה: מספר + יחידה, בלי "+" */
+.stat-readout {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+  direction: rtl;
+}
+
+.stat-readout .stat-number {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-unit {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.stats-bar .stat-unit {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.stats-bar .stat-number {
+  font-size: 2.3rem;
+  color: #ffffff !important;
+}
+
+.stats-bar .stat-label {
+  margin: 0;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* קו מידה דק בין הנתונים */
+.stats-bar .stats-row > div + div .stat-item {
+  border-right: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.22)) right center / 1px 56% no-repeat;
+}
+
+/* מספרים בעמוד "פרופיל החברה" – בצבע אחד, בלי כתום */
+.site-main .stat-number,
+.site-main .stat-number.stat-lightblue,
+.site-main .stat-number.stat-orange,
+.site-main .stat-number.stat-green {
+  color: var(--navy);
+}
+
+/* ⑥ רצועת הסמכות מתחת לתמונה של אבי */
+.credentials-strip {
+  margin: 1rem auto 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  max-width: 280px;
+  list-style: none;
+}
+
+.credentials-strip li {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--navy);
+  background-color: #ffffff;
+}
+
+/* ⑦ תמונות השירותים בגוון נייבי אחיד, שנעלם במעבר עכבר */
+.service-media {
+  position: relative;
+}
+
+.service-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--navy);
+  opacity: 0.28;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.service-media img {
+  filter: saturate(0.7);
+  transition: transform 0.5s ease, filter 0.35s ease;
+}
+
+.service-card:hover .service-media::after {
+  opacity: 0;
+}
+
+.service-card:hover .service-media img {
+  filter: saturate(1);
+}
+
+/* במסכי מגע אין "מעבר עכבר", אז הגוון קל יותר */
+@media (hover: none) {
+  .service-media::after {
+    opacity: 0.18;
+  }
+}
+
+/* ענבר רק על הכפתורים הראשיים – כל השאר בנייבי/כחול */
+.navbar-light .navbar-nav .nav-link:hover::after,
+.navbar-light .navbar-nav .nav-link:focus::after {
+  background-color: var(--blue);
+}
+
+.process-step:hover .process-num {
+  color: #ffffff;
+  background-color: var(--blue);
+}
+
+.footer-links i {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.site-main .about-hero .about-kicker {
+  color: #9cc9ea;
+}
+
+.project-tag {
+  background-color: #e7f0f8;
+}
+
+.cta-inner {
+  border-right-color: var(--navy);
+}
+
+.contact-card-wrapper {
+  border-top-color: var(--navy);
+}
+
+.contact-quick-info i {
+  color: var(--blue);
+}
+
+a:focus-visible,
+.btn:focus-visible,
+.service-link:focus-visible {
+  outline-color: var(--blue);
+}
+
+.hero-video-toggle:focus-visible {
+  outline-color: #ffffff;
+}
+
+/* טלפון */
+@media (max-width: 575.98px) {
+  .stats-bar .stat-number {
+    font-size: 1.65rem;
+  }
+
+  .stat-unit {
+    font-size: 0.8rem;
+  }
+
+  .stats-bar .stat-label {
+    font-size: 0.74rem;
+  }
+
+  .stats-bar .stats-row > div + div .stat-item {
+    background: none;
+  }
+
+  .stats-bar .stats-row > div:nth-child(even) .stat-item {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)) right center / 1px 56% no-repeat;
+  }
+
+  .credentials-strip li {
+    font-size: 0.76rem;
+  }
+}
+
+
+/* מספר + יחידה בשורה אחת, והתווית מתחתיהם */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-label {
+  text-align: center;
+}
