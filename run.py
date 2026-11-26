@@ -152,6 +152,11 @@ def about():
     return render_template("about.html")
 
 
+@app.route("/accessibility-statement")
+def accessibility_statement():
+    return render_template("accessibility_statement.html")
+
+
 @app.route("/requirements")
 def requirements():
     return render_template("requirements.html")

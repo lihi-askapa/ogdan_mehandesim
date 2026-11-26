@@ -48,10 +48,16 @@
     href="{{ url_for('static', filename='theme.css') }}"
   >
 
+  <!-- תפריט נגישות (נטען מוקדם כדי שההגדרות יחולו לפני ההצגה) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='a11y.css') }}">
+  <script src="{{ url_for('static', filename='js/a11y.js') }}"></script>
+
   {% block extra_head %}{% endblock %}
 </head>
 
 <body class="site-body {% block body_class %}{% endblock %}">
+
+  <a href="#main-content" class="skip-link">דלג לתוכן הראשי</a>
 
   <!-- ניווט עליון -->
   <header class="site-header shadow-sm">
@@ -125,7 +131,7 @@
   </header>
 
   <!-- תוכן הדף -->
-  <main class="site-main">
+  <main class="site-main" id="main-content" tabindex="-1">
     {% block content %}{% endblock %}
   </main>
 
@@ -165,6 +171,7 @@
             <li><a href="{{ url_for('about') }}">פרופיל החברה</a></li>
             <li><a href="{{ url_for('requirements') }}">דרושים</a></li>
             <li><a href="{{ url_for('home') }}#contact">צרו קשר</a></li>
+            <li><a href="{{ url_for('accessibility_statement') }}">הצהרת נגישות</a></li>
           </ul>
         </div>
 
